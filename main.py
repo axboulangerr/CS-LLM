@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException, Depends, Request
+from fastapi.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import csv
@@ -15,6 +17,12 @@ origins = [
     "http://localhost:8000",  
     "*",  
 ]
+
+app.mount("/", StaticFiles(directory=".", html=True), name="static")
+
+@app.get("/")
+async def serve_index():
+    return FileResponse("index.html")
 
 app.add_middleware(
     CORSMiddleware,

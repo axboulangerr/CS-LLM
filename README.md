@@ -64,3 +64,11 @@ To install and use the Semantic Cache for LLMs, follow these steps:
    ```bash
    git clone https://github.com/your-username/semantic-cache-llm.git
    cd semantic-cache-llm
+
+
+### Script du service web :
+## lancement
+nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
+
+## arret
+kill $(pgrep -f "uvicorn main:app")
