@@ -14,15 +14,18 @@ app = FastAPI()
 # Configurer les origines autorisées pour CORS
 origins = [
     "http://localhost",  
-    "http://localhost:8000",  
+    "http://localhost:7000",  
     "*",  
 ]
 
-app.mount("/", StaticFiles(directory=".", html=True), name="static")
+#app.mount("/", StaticFiles(directory=".", html=True), name="static")
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 @app.get("/")
 async def serve_index():
-    return FileResponse("index.html")
+    return FileResponse("static/index.html")
 
 app.add_middleware(
     CORSMiddleware,
@@ -140,7 +143,7 @@ def logout(request: Request):
                     rows.append(row)
 
         if not user_found:
-            raise HTTPException(status_code=404, detail="Aucune connexion trouvée pour cette IP")
+            raise HTTPException(status_code=401, detail="Aucune connexion trouvée pour cette IP")
 
         # Réécrire le fichier login.csv sans la ligne de l'utilisateur
         with open(LOGIN_CSV_FILE, "w", newline="") as login_file:
@@ -205,7 +208,7 @@ def get_highlighted_prompts():
                 highlighted_prompts = json.load(json_file)
             return {"highlighted_prompts": highlighted_prompts}
         else:
-            raise HTTPException(status_code=404, detail="Aucun prompt surligné trouvé")
+            raise HTTPException(status_code=401, detail="Aucun prompt surligné trouvé")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
