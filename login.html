@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Connexion</title>
+  <!-- Semantic UI CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <!-- Tailwind CSS (via CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Un peu de style pour le fond */
+    body {
+      background-color: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative; /* Ajouté pour positionner la flèche */
+    }
+
+    /* Taille maximale pour la box */
+    .form-container {
+      max-width: 500px;  /* Largeur maximale */
+      width: 100%;  /* Occupe tout l'espace disponible jusqu'à la largeur maximale */
+      position: relative;
+    }
+
+    /* Positionner la flèche dans le coin supérieur gauche */
+    .back-arrow {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #007bff;
+    }
+
+    /* Style pour le message d'erreur */
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Flèche pour retourner à l'index.html -->
+  <a href="index.html" class="back-arrow">&larr;</a>
+
+  <!-- Container principal pour les formulaires -->
+  <div class="ui container p-8 bg-white shadow-md rounded-lg form-container">
+    <!-- Titre de la page -->
+    <h2 class="ui header text-center mb-6">Connexion / Inscription</h2>
+
+    <!-- Formulaire de connexion (initialement visible) -->
+    <div id="login-form" class="ui form mb-6">
+      <h3 class="ui header">Se connecter</h3>
+      <div class="field">
+        <label for="login-username">Nom d'utilisateur</label>
+        <input type="text" id="login-username" name="username" placeholder="Nom d'utilisateur" class="tailwind-input">
+      </div>
+      <div class="field">
+        <label for="login-password">Mot de passe</label>
+        <input type="password" id="login-password" name="password" placeholder="Mot de passe" class="tailwind-input">
+      </div>
+      <button class="ui primary button w-full" id="login-btn">Se connecter</button>
+
+      <!-- Lien pour basculer vers l'inscription -->
+      <div class="mt-4 text-center">
+        <a href="javascript:void(0)" id="switch-to-register" class="text-blue-500">Inscrivez-vous</a>
+      </div>
+
+      <!-- Zone d'erreur pour la connexion -->
+      <div id="login-error" class="error-message" style="display: none;"></div>
+    </div>
+
+    <!-- Formulaire d'inscription (initialement caché) -->
+    <div id="register-form" class="ui form" style="display: none;">
+      <h3 class="ui header">S'inscrire</h3>
+      <div class="field">
+        <label for="register-username">Nom d'utilisateur</label>
+        <input type="text" id="register-username" name="username" placeholder="Nom d'utilisateur" class="tailwind-input">
+      </div>
+      <div class="field">
+        <label for="register-password">Mot de passe</label>
+        <input type="password" id="register-password" name="password" placeholder="Mot de passe" class="tailwind-input">
+      </div>
+      <button class="ui button w-full" id="register-btn">S'inscrire</button>
+
+      <!-- Lien pour basculer vers la connexion -->
+      <div class="mt-4 text-center">
+        <a href="javascript:void(0)" id="switch-to-login" class="text-blue-500">Retour à la connexion</a>
+      </div>
+
+      <!-- Zone d'erreur pour l'inscription -->
+      <div id="register-error" class="error-message" style="display: none;"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript pour la gestion des actions -->
+  <script>
+    // Fonction pour afficher un message d'erreur
+    function showError(message, formType) {
+      const errorDiv = document.getElementById(formType + "-error");
+      errorDiv.textContent = message;
+      errorDiv.style.display = "block";
+    }
+
+    // Fonction pour cacher un message d'erreur
+    function hideError(formType) {
+      const errorDiv = document.getElementById(formType + "-error");
+      errorDiv.style.display = "none";
+    }
+
+    // Fonction pour gérer la connexion
+    document.getElementById("login-btn").addEventListener("click", async () => {
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+
+      hideError("login"); // Cacher les erreurs avant la requête
+
+      const response = await fetch('http://localhost:8000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        window.location.href = "index.html"; // Redirection vers index.html
+      } else {
+        const data = await response.json();
+        showError(data.detail, "login");
+      }
+    });
+
+    // Fonction pour gérer l'inscription
+    document.getElementById("register-btn").addEventListener("click", async () => {
+      const username = document.getElementById("register-username").value;
+      const password = document.getElementById("register-password").value;
+
+      hideError("register"); // Cacher les erreurs avant la requête
+
+      const response = await fetch('http://localhost:8000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        console.log("Inscription réussie");
+        window.location.href = "index.html"; // Redirection vers index.html
+      } else {
+        const data = await response.json();
+        console.log(data)
+        showError(data.detail.split(':',2), "register");
+      }
+    });
+
+    // Basculer vers le formulaire d'inscription
+    document.getElementById("switch-to-register").addEventListener("click", () => {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("register-form").style.display = "block";
+    });
+
+    // Basculer vers le formulaire de connexion
+    document.getElementById("switch-to-login").addEventListener("click", () => {
+      document.getElementById("register-form").style.display = "none";
+      document.getElementById("login-form").style.display = "block";
+    });
+  </script>
+</body>
+</html>
