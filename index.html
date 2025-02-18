@@ -151,11 +151,7 @@
         
 
         function fetchHighlightedPrompts() {
-<<<<<<< HEAD
-            fetch("http://localhost:8000/get_highlighted_prompts")
-=======
             fetch("http://145.239.177.192:7000/get_highlighted_prompts")
->>>>>>> 6ef81b2 (Changement api link)
                 .then(response => response.json())
                 .then(data => {
                     dataStat = data.highlighted_prompts
@@ -166,11 +162,7 @@
     
         // Fonction pour récupérer les prompts depuis l'API
         function fetchPrompts() {
-<<<<<<< HEAD
-            fetch("http://localhost:8000/getPrompt")
-=======
             fetch("http://145.239.177.192:7000/getPrompt")
->>>>>>> 6ef81b2 (Changement api link)
                 .then(response => response.json())
                 .then(data => {
                     prompts = data;  // Sauvegarder les prompts récupérés
@@ -182,11 +174,7 @@
     
         // Fonction pour vérifier la connexion de l'utilisateur en fonction de l'IP
         function checkConnection() {
-<<<<<<< HEAD
-            fetch("http://localhost:8000/check_connection", { method: 'GET' })
-=======
             fetch("http://145.239.177.192:7000/check_connection", { method: 'GET' })
->>>>>>> 6ef81b2 (Changement api link)
                 .then(response => response.json())
                 .then(data => {
                     if (data.username) {
@@ -212,11 +200,7 @@
         }
 
         function logoutUser() {
-<<<<<<< HEAD
-            fetch("http://localhost:8000/logout", { method: 'POST' })
-=======
             fetch("http://145.239.177.192:7000/logout", { method: 'POST' })
->>>>>>> 6ef81b2 (Changement api link)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("menu-title").textContent = '';
@@ -380,11 +364,7 @@
                 timestamp: new Date().toISOString()
             };
 
-<<<<<<< HEAD
-            fetch("http://localhost:8000/save_highlighted_prompt", {
-=======
             fetch("http://145.239.177.192:7000/save_highlighted_prompt", {
->>>>>>> 6ef81b2 (Changement api link)
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -402,11 +382,7 @@
 
         function fetchAndDisplayHistory() {
             try {
-<<<<<<< HEAD
-                fetch("http://localhost:8000/get_highlighted_prompts")
-=======
                 fetch("http://145.239.177.192:7000/get_highlighted_prompts")
->>>>>>> 6ef81b2 (Changement api link)
                 .then(response => response.json())
                 .then(data => {
                     dataStat = data.highlighted_prompts
