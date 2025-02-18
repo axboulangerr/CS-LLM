@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 username,password
 testuser,testpassword
 mgueneau,doudou29
 melvin,doudou29
 fdp,fdp
+=======
+username,password
+testuser,testpassword
+mgueneau,doudou29
+melvin,doudou29
+fdp,fdp
+>>>>>>> 6ef81b2 (Changement api link)
