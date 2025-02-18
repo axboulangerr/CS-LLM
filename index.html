@@ -151,7 +151,7 @@
         
 
         function fetchHighlightedPrompts() {
-            fetch("http://localhost:8000/get_highlighted_prompts")
+            fetch("http://localhost:7000/get_highlighted_prompts")
                 .then(response => response.json())
                 .then(data => {
                     dataStat = data.highlighted_prompts
@@ -162,7 +162,7 @@
     
         // Fonction pour récupérer les prompts depuis l'API
         function fetchPrompts() {
-            fetch("http://localhost:8000/getPrompt")
+            fetch("http://localhost:7000/getPrompt")
                 .then(response => response.json())
                 .then(data => {
                     prompts = data;  // Sauvegarder les prompts récupérés
@@ -174,7 +174,7 @@
     
         // Fonction pour vérifier la connexion de l'utilisateur en fonction de l'IP
         function checkConnection() {
-            fetch("http://localhost:8000/check_connection", { method: 'GET' })
+            fetch("http://localhost:7000/check_connection", { method: 'GET' })
                 .then(response => response.json())
                 .then(data => {
                     if (data.username) {
@@ -200,7 +200,7 @@
         }
 
         function logoutUser() {
-            fetch("http://localhost:8000/logout", { method: 'POST' })
+            fetch("http://localhost:7000/logout", { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("menu-title").textContent = '';
@@ -364,7 +364,7 @@
                 timestamp: new Date().toISOString()
             };
 
-            fetch("http://localhost:8000/save_highlighted_prompt", {
+            fetch("http://localhost:7000/save_highlighted_prompt", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -382,7 +382,7 @@
 
         function fetchAndDisplayHistory() {
             try {
-                fetch("http://localhost:8000/get_highlighted_prompts")
+                fetch("http://localhost:7000/get_highlighted_prompts")
                 .then(response => response.json())
                 .then(data => {
                     dataStat = data.highlighted_prompts

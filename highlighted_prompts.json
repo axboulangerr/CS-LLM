@@ -710,5 +710,81 @@
         "username": "mgueneau",
         "ip": "127.0.0.1",
         "timestamp": "2025-02-18T15:12:44.558Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "benefits",
+                "color": "lightgreen"
+            },
+            {
+                "word": "exercise",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "92.162.183.167",
+        "timestamp": "2025-02-18T21:23:20.377Z"
+    },
+    {
+        "prompt": "I don't understand calculus.",
+        "highlights": [
+            {
+                "word": "Tell",
+                "color": "yellow"
+            },
+            {
+                "word": "me",
+                "color": "lightgreen"
+            },
+            {
+                "word": "joke",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "92.162.183.167",
+        "timestamp": "2025-02-18T21:30:40.756Z"
+    },
+    {
+        "prompt": "Explain quantum mechanics.",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "92.162.183.167",
+        "timestamp": "2025-02-18T21:34:17.907Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "Explain",
+                "color": "yellow"
+            },
+            {
+                "word": "quantum",
+                "color": "lightgreen"
+            },
+            {
+                "word": "mechanics",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "92.162.183.167",
+        "timestamp": "2025-02-18T21:34:26.123Z"
     }
 ]
