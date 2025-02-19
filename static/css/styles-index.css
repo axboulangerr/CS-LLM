@@ -1,0 +1,162 @@
+body { 
+    display: flex; 
+    margin: 0; 
+  }
+  
+  .sidebar { 
+    width: 250px; 
+    background: #f4f4f4; 
+    padding: 20px; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  
+  .content { 
+    flex-grow: 1; 
+    padding: 20px; 
+    background: #f9f9f9; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100%; 
+    justify-content: flex-start;
+  }
+  
+  .highlight-yellow { 
+    background-color: yellow; 
+  }
+  
+  .highlight-green { 
+    background-color: lightgreen; 
+  }
+  
+  .prompt-container { 
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    width: 80%; 
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .prompt-container h3 { 
+    margin-top: 0; 
+    font-size: 24px; 
+    color: #333; 
+  }
+  
+  .prompt-container p { 
+    font-size: 18px; 
+    color: #555; 
+    line-height: 1.5; 
+  }
+  
+  .button-container { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+  }
+  
+  .ui.button.primary { 
+    background-color: #4CAF50; 
+    color: white; 
+  }
+  
+  .history-container { 
+    margin-top: 40px; 
+    width: 80%; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    margin-top: auto;
+  }
+  
+  .history-item { 
+    background-color: #fff; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+  }
+  
+  .history-item span { 
+    font-weight: bold; 
+    color: #000000; 
+  }
+  
+  .menu a { 
+    display: block; 
+    padding: 10px; 
+    text-decoration: none; 
+    color: black; 
+  }
+  
+  .menu a:hover { 
+    background: #ddd; 
+  }
+  
+  .bottom-menu { 
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styles pour le menu de surlignage flottant */
+  .highlight-menu {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .highlight-menu span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .highlight-menu .yellow {
+    background-color: yellow;
+    border: 0.5px solid;
+  }
+  
+  .highlight-menu .green {
+    background-color: lightgreen;
+    border: 0.5px solid;
+  }
+  
+  .highlight-menu .remove {
+    background-color: white;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0.5px solid;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Espacement entre les graphiques */
+    flex-wrap: wrap;  /* Réorganisation possible sur plusieurs lignes */
+    padding: 20px;
+  }
+  
+  .chart-container canvas {
+    max-width: 400px;  /* Largeur maximale pour les graphiques */
+    max-height: 300px; /* Hauteur maximale pour conserver les proportions */
+    flex: 1 1 30%;
+    min-width: 100px; /* Largeur minimale */
+  }
+  
