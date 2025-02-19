@@ -1,7 +1,7 @@
 
 
 function fetchPrompts() {
-    fetch("http://145.239.177.192:7000/getPrompt")
+    fetch("http://0.0.0.0:7000/getPrompt")
         .then(response => response.json())
         .then(data => {
             prompts = data;
@@ -22,7 +22,6 @@ function loadRandomPrompt() {
 
     // Afficher le prompt
     promptContainer.innerHTML = `
-        <h3>${randomPrompt.Prompt_Type}</h3>
         <p><strong>Prompt:</strong> ${splitTextIntoWords(randomPrompt.Prompt)}</p>
     `;
     // Ajouter un écouteur pour chaque mot pour afficher le menu de surlignage

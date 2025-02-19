@@ -786,5 +786,37 @@
         "username": "mgueneau",
         "ip": "92.162.183.167",
         "timestamp": "2025-02-18T21:34:26.123Z"
+    },
+    {
+        "prompt": "Why do you think education is important?",
+        "highlights": [
+            {
+                "word": "Where",
+                "color": "yellow"
+            },
+            {
+                "word": "you",
+                "color": "lightgreen"
+            },
+            {
+                "word": "see",
+                "color": "lightgreen"
+            },
+            {
+                "word": "yourself",
+                "color": "lightgreen"
+            },
+            {
+                "word": "5",
+                "color": "lightgreen"
+            },
+            {
+                "word": "years",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-19T12:19:52.412Z"
     }
 ]
