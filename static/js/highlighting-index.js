@@ -52,7 +52,7 @@ function saveHighlightedPrompt() {
         timestamp: new Date().toISOString()
     };
 
-    fetch("http://0.0.0.0:7000/save_highlighted_prompt", {
+    fetch("/save_highlighted_prompt", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function removeHighlight() {
 }
 
 function fetchHighlightedPrompts() {
-    fetch("http://0.0.0.0:7000/get_highlighted_prompts")
+    fetch("/get_highlighted_prompts")
         .then(response => response.json())
         .then(data => {
             dataStat = data.highlighted_prompts;
