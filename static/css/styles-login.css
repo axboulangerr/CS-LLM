@@ -1,0 +1,33 @@
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ajouté pour positionner la flèche */
+  }
+
+  /* Taille maximale pour la box */
+  .form-container {
+    max-width: 500px;  /* Largeur maximale */
+    width: 100%;  /* Occupe tout l'espace disponible jusqu'à la largeur maximale */
+    position: relative;
+  }
+
+  /* Positionner la flèche dans le coin supérieur gauche */
+  .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+  }
+
+  /* Style pour le message d'erreur */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
