@@ -112,6 +112,7 @@ def register(user: UserLogin):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+#ça a aucun sens
 @app.get("/check_connection")
 def check_connection(request: Request):
     try:

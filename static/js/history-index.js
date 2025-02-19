@@ -50,7 +50,7 @@ function renderHistory() {
 
 function fetchAndDisplayHistory() {
     try {
-        fetch("http://0.0.0.0:7000/get_highlighted_prompts")
+        fetch("/get_highlighted_prompts")
         .then(response => response.json())
         .then(data => {
             dataStat = data.highlighted_prompts;

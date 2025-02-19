@@ -242,5 +242,42 @@
         "username": "mgueneau",
         "ip": "127.0.0.1",
         "timestamp": "2025-02-19T15:08:16.599Z"
+        "timestamp": "2025-02-19T12:19:52.412Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            },
+            {
+                "word": "planning",
+                "color": "yellow"
+            },
+            {
+                "word": "planning",
+                "color": "yellow"
+            },
+            {
+                "word": "to",
+                "color": "yellow"
+            },
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "planning",
+                "color": "yellow"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "fdp",
+        "ip": "46.193.64.108",
+        "timestamp": "2025-02-19T13:21:18.009Z"
     }
 ]
