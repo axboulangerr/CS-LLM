@@ -5,43 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prompt Aléatoire</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <link rel="stylesheet" href="http://145.239.177.192:7000/static/css/styles-index.css">
+  <link rel="stylesheet" href="http://0.0.0.0:7000/static/css/styles-index.css">
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="sidebar">
     <div>
       <h3 id="menu-title"></h3>
       <div class="menu" id="menu-links">
-        <a href="http://145.239.177.192:7000/static/index.html">Mon Espace</a>
-        <a href="http://145.239.177.192:7000/static/stats.html">Statistiques Général</a>
-        <a href="http://145.239.177.192:7000/static/stats.html">Classement</a>
+        <a href="http://0.0.0.0:7000/static/index.html">Mon Espace</a>
+        <a href="http://0.0.0.0:7000/static/stats.html">Statistiques Général</a>
+        <a href="http://0.0.0.0:7000/static/stats.html">Classement</a>
       </div>
     </div>
     <div class="bottom-menu" id="bottom-menu">
-      <a style="margin-bottom: 5px;" href="https://github.com/axboulangerr/CS-LLM/tree/main">github</a>
-      <a href="http://145.239.177.192:7000/static/login.html" id="login-link">Connexion</a>
+      <a style="margin-bottom: 5px;" href="https://github.com/axboulangerr/CS-LLM/tree/main">GitHub</a>
+      <a href="http://0.0.0.0:7000/static/login.html" id="login-link">Connexion</a>
     </div>
   </div>
 
+  <!-- Content Area -->
   <div class="content">
     <h1 class="ui header">Prompt</h1>
+    
+    <!-- Prompt Section -->
     <div id="prompt" class="prompt-container">
       <h3>Aucun prompt chargé</h3>
     </div>
+
+    <!-- Button to validate prompt -->
     <div class="button-container">
       <button class="ui button blue" onclick="loadRandomPrompt()" disabled>Valider</button>
     </div>
+
+    <!-- Chart Section -->
     <div class="chart-container">
-      <canvas id="dailyPromptsChart" width="200" height="100"></canvas>
-      <canvas id="highlightRatioChart" width="200" height="100"></canvas>
-      <canvas id="customChart" width="200" height="100"></canvas>
+      <canvas id="dailyPromptsChart" width="400" height="200"></canvas>
+      <canvas id="highlightRatioChart" width="400" height="200"></canvas>
+      <canvas id="customChart" width="400" height="200"></canvas>
     </div>
+
+    <!-- History Section -->
     <div class="history-container">
       <h3>Historique des Prompts</h3>
       <div id="history-list"></div>
     </div>
   </div>
 
+  <!-- Logout Confirmation Modal -->
   <div class="ui modal" id="logout-modal">
     <div class="header">Confirmation de déconnexion</div>
     <div class="content">
@@ -53,15 +64,25 @@
     </div>
   </div>
 
+  <!-- Highlight Menu for Text -->
   <div id="highlight-menu" class="highlight-menu">
-    <span class="yellow"></span>
-    <span class="green"></span>
+    <span class="yellow" onclick="highlightWord('yellow')"></span>
+    <span class="green" onclick="highlightWord('lightgreen')"></span>
     <span class="remove" onclick="removeHighlight()"></span>
   </div>
 
+  <!-- External JS Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="http://145.239.177.192:7000/static/js/script-index.js"></script>
+
+  <!-- Custom JS Files -->
+  <script src="http://0.0.0.0:7000/static/js/connection-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/prompts-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/highlighting-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/history-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/charts-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/main-index.js"></script>
+
 </body>
 </html>
