@@ -786,5 +786,497 @@
         "username": "mgueneau",
         "ip": "92.162.183.167",
         "timestamp": "2025-02-18T21:34:26.123Z"
+    },
+    {
+        "prompt": "Summarize the plot of Romeo and Juliet.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:10.507Z"
+    },
+    {
+        "prompt": "The weather is really nice.",
+        "highlights": [
+            {
+                "word": "feeling",
+                "color": "lightgreen"
+            },
+            {
+                "word": "sad",
+                "color": "lightgreen"
+            },
+            {
+                "word": "today",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:26.621Z"
+    },
+    {
+        "prompt": "The weather is really nice.",
+        "highlights": [
+            {
+                "word": "weather",
+                "color": "lightgreen"
+            },
+            {
+                "word": "really",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nice",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:34.740Z"
+    },
+    {
+        "prompt": "What is your favorite color?",
+        "highlights": [
+            {
+                "word": "weather",
+                "color": "lightgreen"
+            },
+            {
+                "word": "really",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nice",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:39.910Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "favorite",
+                "color": "lightgreen"
+            },
+            {
+                "word": "color",
+                "color": "lightgreen"
+            },
+            {
+                "word": "your",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:48.152Z"
+    },
+    {
+        "prompt": "Describe the process of photosynthesis.",
+        "highlights": [
+            {
+                "word": "Tell",
+                "color": "yellow"
+            },
+            {
+                "word": "me",
+                "color": "lightgreen"
+            },
+            {
+                "word": "joke",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:09:54.327Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "Describe",
+                "color": "yellow"
+            },
+            {
+                "word": "process",
+                "color": "lightgreen"
+            },
+            {
+                "word": "photosynthesis",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:00.631Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:05.438Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "feeling",
+                "color": "lightgreen"
+            },
+            {
+                "word": "today",
+                "color": "lightgreen"
+            },
+            {
+                "word": "sad",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:12.168Z"
+    },
+    {
+        "prompt": "What is your favorite color?",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:15.961Z"
+    },
+    {
+        "prompt": "The movie was amazing.",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "your",
+                "color": "lightgreen"
+            },
+            {
+                "word": "favorite",
+                "color": "lightgreen"
+            },
+            {
+                "word": "color",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:22.717Z"
+    },
+    {
+        "prompt": "Where do you see yourself in 5 years?",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:27.702Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "Where",
+                "color": "yellow"
+            },
+            {
+                "word": "yourself",
+                "color": "lightgreen"
+            },
+            {
+                "word": "see",
+                "color": "lightgreen"
+            },
+            {
+                "word": "you",
+                "color": "lightgreen"
+            },
+            {
+                "word": "years",
+                "color": "lightgreen"
+            },
+            {
+                "word": "5",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:40.382Z"
+    },
+    {
+        "prompt": "The weather is really nice.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T08:10:44.392Z"
+    },
+    {
+        "prompt": "Where do you see yourself in 5 years?",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T10:54:32.596Z"
+    },
+    {
+        "prompt": "Explain quantum mechanics.",
+        "highlights": [
+            {
+                "word": "Describe",
+                "color": "yellow"
+            },
+            {
+                "word": "process",
+                "color": "lightgreen"
+            },
+            {
+                "word": "photosynthesis",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:22:13.215Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "feeling",
+                "color": "lightgreen"
+            },
+            {
+                "word": "sad",
+                "color": "lightgreen"
+            },
+            {
+                "word": "today",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:22:30.493Z"
+    },
+    {
+        "prompt": "Explain quantum mechanics.",
+        "highlights": [
+            {
+                "word": "weather",
+                "color": "lightgreen"
+            },
+            {
+                "word": "really",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nice",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:24:37.378Z"
+    },
+    {
+        "prompt": "Where do you see yourself in 5 years?",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:25:44.982Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "weather",
+                "color": "lightgreen"
+            },
+            {
+                "word": "really",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nice",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:33:35.765Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:34:13.723Z"
+    },
+    {
+        "prompt": "How do you cook pasta?",
+        "highlights": [
+            {
+                "word": "Explain",
+                "color": "lightgreen"
+            },
+            {
+                "word": "Explain",
+                "color": "yellow"
+            },
+            {
+                "word": "quantum",
+                "color": "lightgreen"
+            },
+            {
+                "word": "mechanics",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "exzhonya",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:38:46.203Z"
+    },
+    {
+        "prompt": "What is your favorite color?",
+        "highlights": [
+            {
+                "word": "weather",
+                "color": "lightgreen"
+            },
+            {
+                "word": "really",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nice",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "exzhonya",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T11:38:57.314Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "your",
+                "color": "lightgreen"
+            },
+            {
+                "word": "favorite",
+                "color": "lightgreen"
+            },
+            {
+                "word": "color",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "exzhonya",
+        "ip": "104.28.242.225",
+        "timestamp": "2025-02-19T12:08:13.828Z"
     }
 ]
