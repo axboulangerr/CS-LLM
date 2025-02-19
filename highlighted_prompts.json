@@ -278,5 +278,21 @@
         "username": "fdp",
         "ip": "46.193.64.108",
         "timestamp": "2025-02-19T13:21:18.009Z"
+    },
+    {
+        "prompt": "List the ingredients for making pizza.",
+        "highlights": [
+            {
+                "word": "Where",
+                "color": "yellow"
+            },
+            {
+                "word": "do",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-19T15:45:22.579Z"
     }
 ]

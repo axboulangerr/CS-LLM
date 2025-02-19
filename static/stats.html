@@ -89,41 +89,42 @@
   <script>
 
     const nodes = new vis.DataSet([]);
-    const nodeData = new vis.DataSet([]);
+    const nodeData = {}; // Dictionnaire associant les yellowNodes à leurs greenNodes
 
     // Fonction pour vérifier si un nœud avec un mot existe déjà
     function nodeExists(word) {
-    const existingNode = nodes.get().find(node => node.label.toLowerCase() === word.toLowerCase());
-    return existingNode !== undefined;
+        return nodes.get().some(node => node.label.toLowerCase() === word.toLowerCase());
     }
 
     // Fonction pour ajouter des nœuds pour chaque mot coloré en yellow
     function addYellowNodes() {
       dataStat.forEach(item => {
-          const greenNode = new Set();
+          let yellowNode = null;
+          let greenWords = [];
+
           item.highlights.forEach(highlight => {
               if (highlight.color === 'yellow' && !nodeExists(highlight.word)) {
+                  yellowNode = highlight.word;
                   nodes.add({
-                      id: nodes.length + 1, // Id unique pour le nœud
-                      label: highlight.word,
-                      title: `Mot: ${highlight.word}`,
+                      id: yellowNode, // Id unique basé sur le mot
+                      label: yellowNode,
+                      title: `Mot: ${yellowNode}`,
                   });
+                  nodeData[yellowNode] = ""; // Initialisation avec une chaîne vide
               }
-              if (highlight.color === 'lightgreen' && !nodeExists(highlight.word)) {
-                  greenNode.add(highlight.word);
+              if (highlight.color === 'lightgreen' && yellowNode) {
+                  greenWords.push(highlight.word); // Ajout du mot vert à la liste
               }
           });
 
-          if (greenNode.size > 0) {  // Vérifier s'il y a des mots verts
-              const greenNodeString = Array.from(greenNode).join(", ");
-              nodeData.add({  // Correction ici (on ajoute bien à nodes et non à nodeData)
-                  id: greenNodeString,
-                  label: greenNodeString,
-                  title: `Mots : ${greenNodeString}`,
-              });
+          if (yellowNode && greenWords.length > 0) {
+            nodeData[yellowNode] = greenWords;
+            console.log(nodeData)
           }
       });
-  }
+    }
+
+
 
 
     
@@ -164,73 +165,72 @@
       }
     };
 
-    // Initialisation du graphe
     const container = document.getElementById("network");
     const data = { nodes, edges };
     const network = new vis.Network(container, data, options);
 
-    // Gestion du clic sur un nœud
-    network.on("click", function (params) {
-      if (params.nodes.length > 0) {
-        const nodeId = params.nodes[0];
-        const node = nodes.get(nodeId);
-        document.getElementById("node-details").innerText = node.title;
-        $("#node-modal").modal("show");
-      }
-    });
-
     // Fonction pour afficher le réseau spécifique à chaque nœud
-    function showNodeNetwork(nodeId,nodeData) {
-      const nodeNetworkContainer = document.getElementById("node-network");
-      
-      // Création de nouveaux nœuds et bords pour chaque réseau
+    function showNodeNetwork(nodeId) {
+    const nodeNetworkContainer = document.getElementById("node-network");
+    
+    let relatedNodes = new Set();
 
-      
-      const edgeData = [
-          { from: nodeId, to: nodeId + 1 }
-      ];
-
-      const nodes = nodeData
-      console.log(nodes)
-      const edges = new vis.DataSet(edgeData);
-      
-      const options = {
-          nodes: {
-          shape: "dot",
-          size: 20,
-          font: {
-              size: 15,
-              color: "#000000"
-          },
-          borderWidth: 2
-          },
-          edges: {
-          width: 2,
-          color: "#000000"
-          },
-          interaction: {
-          hover: true
-          }
-      };
-
-      // Initialisation du réseau dans le modal
-      const nodeNetwork = new vis.Network(nodeNetworkContainer, { nodes, edges }, options);
+    if (nodeData[nodeId]) {
+        if (Array.isArray(nodeData[nodeId])) {  
+            nodeData[nodeId].forEach(word => relatedNodes.add(word)); // Utilisation directe du tableau
+        } else {
+            console.error("Format invalide pour nodeData[nodeId]:", nodeData[nodeId]);
+        }
     }
+
+    const nodeList = Array.from(relatedNodes).map((word, index) => ({
+        id: index + 1,
+        label: word,
+        title: `Mot: ${word}`
+    }));
+    
+    const nodes = new vis.DataSet(nodeList);
+    const edges = new vis.DataSet([]);
+    
+    const options = {
+        nodes: {
+            shape: "dot",
+            size: 20,
+            font: {
+                size: 15,
+                color: "#000000"
+            },
+            borderWidth: 2
+        },
+        edges: {
+            width: 2,
+            color: "#000000"
+        },
+        interaction: {
+            hover: true
+        }
+    };
+
+    // Initialisation du réseau dans le modal
+    new vis.Network(nodeNetworkContainer, { nodes, edges }, options);
+}
+
 
     // Fonction pour afficher les détails du nœud et son réseau
     network.on("click", function (params) {
-      if (params.nodes.length > 0) {
-          const nodeId = params.nodes[0];
-          const node = nodes.get(nodeId);
-          document.getElementById("node-details").innerText = node.title;
-          
-          // Appeler la fonction pour afficher le réseau spécifique
-          showNodeNetwork(nodeId,nodeData);
-          
-          // Ouvrir le modal
-          $("#node-modal").modal("show");
-      }
+        if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            const node = nodes.get(nodeId);
+            document.getElementById("node-details").innerText = node.title;
+            
+            // Appeler la fonction pour afficher le réseau spécifique
+            showNodeNetwork(nodeId);
+            
+            // Ouvrir le modal
+            $("#node-modal").modal("show");
+        }
     });
+
 
   </script>
 </body>
