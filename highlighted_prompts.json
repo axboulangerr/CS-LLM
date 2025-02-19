@@ -1,49 +1,9 @@
 [
     {
-        "prompt": "Where do you see yourself in 5 years?",
+        "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-17T12:34:49.230Z"
-    },
-    {
-        "prompt": "Where do you see yourself in 5 years?",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:41:02.267Z"
-    },
-    {
-        "prompt": "List the ingredients for making pizza.",
-        "highlights": [
-            {
-                "word": "How",
-                "color": "yellow"
-            },
-            {
-                "word": "do",
+                "word": "Where",
                 "color": "yellow"
             },
             {
@@ -51,212 +11,64 @@
                 "color": "lightgreen"
             },
             {
-                "word": "cook",
+                "word": "see",
                 "color": "lightgreen"
             },
             {
-                "word": "pasta",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:44:08.373Z"
-    },
-    {
-        "prompt": "The weather is really nice.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
+                "word": "yourself",
                 "color": "lightgreen"
             },
             {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:45:15.896Z"
-    },
-    {
-        "prompt": "The weather is really nice.",
-        "highlights": [
-            {
-                "word": "weather",
+                "word": "5",
                 "color": "lightgreen"
             },
             {
-                "word": "really",
-                "color": "lightgreen"
-            },
-            {
-                "word": "nice",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:45:23.211Z"
-    },
-    {
-        "prompt": "The movie was amazing.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
+                "word": "years",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:47:29.527Z"
+        "timestamp": "2025-02-19T14:28:32.634Z"
     },
     {
-        "prompt": "I'm feeling sad today.",
-        "highlights": [
-            {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:47:39.540Z"
-    },
-    {
-        "prompt": "Describe the process of photosynthesis.",
+        "prompt": "I'm planning to travel.",
         "highlights": [
             {
                 "word": "feeling",
                 "color": "lightgreen"
             },
             {
-                "word": "today",
-                "color": "lightgreen"
-            },
-            {
                 "word": "sad",
                 "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:47:49.004Z"
-    },
-    {
-        "prompt": "Where do you see yourself in 5 years?",
-        "highlights": [
-            {
-                "word": "Describe",
-                "color": "yellow"
             },
             {
-                "word": "process",
-                "color": "lightgreen"
-            },
-            {
-                "word": "photosynthesis",
+                "word": "today",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:48:35.333Z"
-    },
-    {
-        "prompt": "Summarize the plot of Romeo and Juliet.",
-        "highlights": [
-            {
-                "word": "What",
-                "color": "yellow"
-            },
-            {
-                "word": "favorite",
-                "color": "lightgreen"
-            },
-            {
-                "word": "color",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:57:32.196Z"
-    },
-    {
-        "prompt": "The movie was amazing.",
-        "highlights": [
-            {
-                "word": "Explain",
-                "color": "yellow"
-            },
-            {
-                "word": "quantum",
-                "color": "lightgreen"
-            },
-            {
-                "word": "mechanics",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:59:11.770Z"
-    },
-    {
-        "prompt": "I'm feeling sad today.",
-        "highlights": [
-            {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:59:16.634Z"
+        "timestamp": "2025-02-19T14:38:18.600Z"
     },
     {
         "prompt": "List the ingredients for making pizza.",
         "highlights": [
             {
-                "word": "feeling",
+                "word": "planning",
                 "color": "lightgreen"
             },
             {
-                "word": "sad",
-                "color": "lightgreen"
-            },
-            {
-                "word": "today",
+                "word": "travel",
                 "color": "lightgreen"
             }
         ],
-        "username": "testuser",
+        "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:59:22.671Z"
+        "timestamp": "2025-02-19T14:38:23.233Z"
     },
     {
-        "prompt": "What are the benefits of exercise?",
+        "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
                 "word": "List",
@@ -275,52 +87,12 @@
                 "color": "lightgreen"
             }
         ],
-        "username": "testuser",
+        "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:59:30.614Z"
+        "timestamp": "2025-02-19T14:38:29.866Z"
     },
     {
         "prompt": "I don't understand calculus.",
-        "highlights": [
-            {
-                "word": "What",
-                "color": "yellow"
-            },
-            {
-                "word": "benefits",
-                "color": "lightgreen"
-            },
-            {
-                "word": "exercise",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "testuser",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T12:59:36.345Z"
-    },
-    {
-        "prompt": "I don't understand calculus.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T13:04:05.548Z"
-    },
-    {
-        "prompt": "Explain quantum mechanics.",
         "highlights": [
             {
                 "word": "Describe",
@@ -335,288 +107,32 @@
                 "color": "lightgreen"
             }
         ],
-        "username": "melvin",
+        "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T13:05:12.511Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "Explain",
-                "color": "yellow"
-            },
-            {
-                "word": "quantum",
-                "color": "lightgreen"
-            },
-            {
-                "word": "mechanics",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T13:05:19.392Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T13:05:24.344Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T13:05:30.760Z"
-    },
-    {
-        "prompt": "Where do you see yourself in 5 years?",
-        "highlights": [
-            {
-                "word": "Where",
-                "color": "yellow"
-            },
-            {
-                "word": "do",
-                "color": "lightgreen"
-            },
-            {
-                "word": "you",
-                "color": "lightgreen"
-            },
-            {
-                "word": "see",
-                "color": "lightgreen"
-            },
-            {
-                "word": "yourself",
-                "color": "lightgreen"
-            },
-            {
-                "word": "5",
-                "color": "lightgreen"
-            },
-            {
-                "word": "years",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:24:59.613Z"
-    },
-    {
-        "prompt": "Describe the process of photosynthesis.",
-        "highlights": [
-            {
-                "word": "I",
-                "color": "yellow"
-            },
-            {
-                "word": "m",
-                "color": "yellow"
-            },
-            {
-                "word": "feeling",
-                "color": "lightgreen"
-            },
-            {
-                "word": "sad",
-                "color": "lightgreen"
-            },
-            {
-                "word": "today",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:26:57.152Z"
-    },
-    {
-        "prompt": "I'm feeling sad today.",
-        "highlights": [
-            {
-                "word": "Describe",
-                "color": "yellow"
-            },
-            {
-                "word": "process",
-                "color": "lightgreen"
-            },
-            {
-                "word": "photosynthesis",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:27:02.277Z"
-    },
-    {
-        "prompt": "How do you cook pasta?",
-        "highlights": [
-            {
-                "word": "I",
-                "color": "yellow"
-            },
-            {
-                "word": "m",
-                "color": "yellow"
-            },
-            {
-                "word": "feeling",
-                "color": "lightgreen"
-            },
-            {
-                "word": "sad",
-                "color": "lightgreen"
-            },
-            {
-                "word": "today",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:27:13.668Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "How",
-                "color": "yellow"
-            },
-            {
-                "word": "do",
-                "color": "lightgreen"
-            },
-            {
-                "word": "you",
-                "color": "lightgreen"
-            },
-            {
-                "word": "cook",
-                "color": "lightgreen"
-            },
-            {
-                "word": "pasta",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:27:23.509Z"
+        "timestamp": "2025-02-19T14:38:34.456Z"
     },
     {
         "prompt": "The weather is really nice.",
         "highlights": [
             {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
+                "word": "understand",
                 "color": "lightgreen"
             },
             {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:27:28.286Z"
-    },
-    {
-        "prompt": "How do you cook pasta?",
-        "highlights": [
-            {
-                "word": "m",
-                "color": "yellow"
-            },
-            {
-                "word": "I",
-                "color": "yellow"
-            },
-            {
-                "word": "feeling",
+                "word": "don",
                 "color": "lightgreen"
             },
             {
-                "word": "sad",
-                "color": "lightgreen"
-            },
-            {
-                "word": "today",
+                "word": "calculus",
                 "color": "lightgreen"
             }
         ],
-        "username": "melvin",
+        "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:27:52.160Z"
+        "timestamp": "2025-02-19T14:38:41.376Z"
     },
     {
-        "prompt": "I don't understand calculus.",
-        "highlights": [
-            {
-                "word": "Romeo",
-                "color": "yellow"
-            },
-            {
-                "word": "Romeo",
-                "color": "lightgreen"
-            },
-            {
-                "word": "Juliet",
-                "color": "lightgreen"
-            },
-            {
-                "word": "Summarize",
-                "color": "yellow"
-            },
-            {
-                "word": "plot",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T14:29:31.544Z"
-    },
-    {
-        "prompt": "The weather is really nice.",
+        "prompt": "Summarize the plot of Romeo and Juliet.",
         "highlights": [
             {
                 "word": "weather",
@@ -631,48 +147,12 @@
                 "color": "lightgreen"
             }
         ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T15:07:53.001Z"
-    },
-    {
-        "prompt": "I'm planning to travel.",
-        "highlights": [
-            {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "melvin",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T15:09:21.658Z"
-    },
-    {
-        "prompt": "What are the benefits of exercise?",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T15:11:58.772Z"
+        "timestamp": "2025-02-19T14:38:46.917Z"
     },
     {
-        "prompt": "The weather is really nice.",
+        "prompt": "Why do you think education is important?",
         "highlights": [
             {
                 "word": "Summarize",
@@ -693,105 +173,13 @@
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T15:12:21.882Z"
+        "timestamp": "2025-02-19T14:38:53.155Z"
     },
     {
         "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-18T15:12:44.558Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "What",
-                "color": "yellow"
-            },
-            {
-                "word": "benefits",
-                "color": "lightgreen"
-            },
-            {
-                "word": "exercise",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "92.162.183.167",
-        "timestamp": "2025-02-18T21:23:20.377Z"
-    },
-    {
-        "prompt": "I don't understand calculus.",
-        "highlights": [
-            {
-                "word": "Tell",
-                "color": "yellow"
-            },
-            {
-                "word": "me",
-                "color": "lightgreen"
-            },
-            {
-                "word": "joke",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "92.162.183.167",
-        "timestamp": "2025-02-18T21:30:40.756Z"
-    },
-    {
-        "prompt": "Explain quantum mechanics.",
-        "highlights": [
-            {
-                "word": "movie",
-                "color": "lightgreen"
-            },
-            {
-                "word": "amazing",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "92.162.183.167",
-        "timestamp": "2025-02-18T21:34:17.907Z"
-    },
-    {
-        "prompt": "I'm feeling sad today.",
-        "highlights": [
-            {
-                "word": "Explain",
-                "color": "yellow"
-            },
-            {
-                "word": "quantum",
-                "color": "lightgreen"
-            },
-            {
-                "word": "mechanics",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "92.162.183.167",
-        "timestamp": "2025-02-18T21:34:26.123Z"
-    },
-    {
-        "prompt": "Why do you think education is important?",
-        "highlights": [
-            {
-                "word": "Where",
+                "word": "Why",
                 "color": "yellow"
             },
             {
@@ -799,24 +187,60 @@
                 "color": "lightgreen"
             },
             {
-                "word": "see",
+                "word": "think",
                 "color": "lightgreen"
             },
             {
-                "word": "yourself",
+                "word": "education",
                 "color": "lightgreen"
             },
             {
-                "word": "5",
-                "color": "lightgreen"
-            },
-            {
-                "word": "years",
+                "word": "important",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T12:19:52.412Z"
+        "timestamp": "2025-02-19T14:39:02.120Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "Describe",
+                "color": "yellow"
+            },
+            {
+                "word": "process",
+                "color": "lightgreen"
+            },
+            {
+                "word": "photosynthesis",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-19T14:39:07.637Z"
+    },
+    {
+        "prompt": "What is your favorite color?",
+        "highlights": [
+            {
+                "word": "Where",
+                "color": "yellow"
+            },
+            {
+                "word": "do",
+                "color": "lightgreen"
+            },
+            {
+                "word": "you",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-19T15:08:16.599Z"
     }
 ]

@@ -83,6 +83,8 @@ function fetchHighlightedPrompts() {
         .then(data => {
             dataStat = data.highlighted_prompts;
             updateCharts();
+            console.log(dataStat)
+            addYellowNodes();
         })
         .catch(err => console.error('Erreur lors de la récupération des prompts surlignés:', err));
 }

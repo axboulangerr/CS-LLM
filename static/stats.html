@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prompt Aléatoire</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <link rel="stylesheet" href="http://0.0.0.0:7000/static/css/styles-index.css">
+  <link rel="stylesheet" href="http://0.0.0.0:7000/static/css/styles-stats.css">
 </head>
 <body>
   <!-- Sidebar -->
@@ -24,13 +24,34 @@
     </div>
   </div>
 
-    <!-- Chart Section -->
-    <div class="chart-container">
-      <canvas id="dailyPromptsChart" width="400" height="200"></canvas>
-      <canvas id="highlightRatioChart" width="400" height="200"></canvas>
-      <canvas id="customChart" width="400" height="200"></canvas>
+    <div class="chart" style="display: flex; flex-direction: column;">
+        <div class="chart-container">
+            <canvas id="dailyPromptsChart" width="400" height="200"></canvas>
+            <canvas id="highlightRatioChart" width="400" height="200"></canvas>
+            <canvas id="customChart" width="400" height="200"></canvas>
+        </div>
+        <canvas id="weeklyElementsChart" width="1200" height="200"></canvas>
+        <div class="ui input" style="margin: 20px;">
+            <input type="text" id="search-input" placeholder="Rechercher un nœud..." />
+        </div>
+  
+        <div id="network"></div>
     </div>
 
+
+    <!-- Popup Modal avec un autre réseau vis.js -->
+    <div class="ui modal" id="node-modal">
+        <div class="header">Détails du Nœud</div>
+        <div class="content">
+        <p id="node-details">Contenu du nœud ici...</p>
+        <!-- Div pour le réseau dans le modal -->
+        <div id="node-network" style="width: 100%; height: 300px;"></div>
+        </div>
+        <div class="actions">
+        <div class="ui button" onclick="$('#node-modal').modal('hide')">Fermer</div>
+        </div>
+    </div>
+  
    
   <!-- Logout Confirmation Modal -->
   <div class="ui modal" id="logout-modal">
@@ -55,13 +76,162 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom JS Files -->
   <script src="http://0.0.0.0:7000/static/js/connection-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/prompts-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/highlighting-index.js"></script>
+  <script src="/static/js/history-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/charts-stats.js"></script>
-  <script src="http://0.0.0.0:7000/static/js/main-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/main-stats.js"></script>
+  <script>
 
+    const nodes = new vis.DataSet([]);
+    const nodeData = new vis.DataSet([]);
+
+    // Fonction pour vérifier si un nœud avec un mot existe déjà
+    function nodeExists(word) {
+    const existingNode = nodes.get().find(node => node.label.toLowerCase() === word.toLowerCase());
+    return existingNode !== undefined;
+    }
+
+    // Fonction pour ajouter des nœuds pour chaque mot coloré en yellow
+    function addYellowNodes() {
+      dataStat.forEach(item => {
+          const greenNode = new Set();
+          item.highlights.forEach(highlight => {
+              if (highlight.color === 'yellow' && !nodeExists(highlight.word)) {
+                  nodes.add({
+                      id: nodes.length + 1, // Id unique pour le nœud
+                      label: highlight.word,
+                      title: `Mot: ${highlight.word}`,
+                  });
+              }
+              if (highlight.color === 'lightgreen' && !nodeExists(highlight.word)) {
+                  greenNode.add(highlight.word);
+              }
+          });
+
+          if (greenNode.size > 0) {  // Vérifier s'il y a des mots verts
+              const greenNodeString = Array.from(greenNode).join(", ");
+              nodeData.add({  // Correction ici (on ajoute bien à nodes et non à nodeData)
+                  id: greenNodeString,
+                  label: greenNodeString,
+                  title: `Mots : ${greenNodeString}`,
+              });
+          }
+      });
+  }
+
+
+    
+
+    // Fonction de filtrage des nœuds
+    document.getElementById("search-input").addEventListener("input", function () {
+    const searchQuery = this.value.toLowerCase(); // Récupérer la valeur de la recherche
+    const filteredNodes = nodes.get().filter(node => node.label.toLowerCase().includes(searchQuery)); // Filtrer les nœuds
+    
+    // Mettre à jour le graphe avec les nœuds filtrés
+    const filteredNodeIds = filteredNodes.map(node => node.id); // Récupérer les IDs des nœuds filtrés
+    const allNodeIds = nodes.get().map(node => node.id); // Récupérer tous les IDs des nœuds
+
+    // Afficher uniquement les nœuds correspondants à la recherche
+    nodes.update(allNodeIds.map(id => ({ id, hidden: !filteredNodeIds.includes(id) })));
+    });
+
+    const edges = new vis.DataSet([
+    ]);
+
+    // Options du graphe
+    const options = {
+      nodes: {
+        shape: "dot",
+        size: 20,
+        font: {
+          size: 15,
+          color: "#000000"
+        },
+        borderWidth: 2
+      },
+      edges: {
+        width: 2,
+        color: "#000000"
+      },
+      interaction: {
+        hover: true
+      }
+    };
+
+    // Initialisation du graphe
+    const container = document.getElementById("network");
+    const data = { nodes, edges };
+    const network = new vis.Network(container, data, options);
+
+    // Gestion du clic sur un nœud
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const node = nodes.get(nodeId);
+        document.getElementById("node-details").innerText = node.title;
+        $("#node-modal").modal("show");
+      }
+    });
+
+    // Fonction pour afficher le réseau spécifique à chaque nœud
+    function showNodeNetwork(nodeId,nodeData) {
+      const nodeNetworkContainer = document.getElementById("node-network");
+      
+      // Création de nouveaux nœuds et bords pour chaque réseau
+
+      
+      const edgeData = [
+          { from: nodeId, to: nodeId + 1 }
+      ];
+
+      const nodes = nodeData
+      console.log(nodes)
+      const edges = new vis.DataSet(edgeData);
+      
+      const options = {
+          nodes: {
+          shape: "dot",
+          size: 20,
+          font: {
+              size: 15,
+              color: "#000000"
+          },
+          borderWidth: 2
+          },
+          edges: {
+          width: 2,
+          color: "#000000"
+          },
+          interaction: {
+          hover: true
+          }
+      };
+
+      // Initialisation du réseau dans le modal
+      const nodeNetwork = new vis.Network(nodeNetworkContainer, { nodes, edges }, options);
+    }
+
+    // Fonction pour afficher les détails du nœud et son réseau
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+          const nodeId = params.nodes[0];
+          const node = nodes.get(nodeId);
+          document.getElementById("node-details").innerText = node.title;
+          
+          // Appeler la fonction pour afficher le réseau spécifique
+          showNodeNetwork(nodeId,nodeData);
+          
+          // Ouvrir le modal
+          $("#node-modal").modal("show");
+      }
+    });
+
+  </script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace Spatial avec Vis.js</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+  <style>
+    #network {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <h3 id="menu-title"></h3>
+      <div class="menu" id="menu-links">
+        <a href="http://0.0.0.0:7000/static/index.html">Mon Espace</a>
+        <a href="http://0.0.0.0:7000/static/stats.html">Statistiques Général</a>
+        <a href="http://0.0.0.0:7000/static/stats.html">Classement</a>
+      </div>
+    </div>
+    <div class="bottom-menu" id="bottom-menu">
+      <a style="margin-bottom: 5px;" href="https://github.com/axboulangerr/CS-LLM/tree/main">GitHub</a>
+      <a href="http://0.0.0.0:7000/static/login.html" id="login-link">Connexion</a>
+    </div>
+  </div>
+
+  <!-- Network Container -->
+  <div id="network"></div>
+
+  <!-- Popup Modal -->
+  <div class="ui modal" id="node-modal">
+    <div class="header">Détails du Nœud</div>
+    <div class="content">
+      <p id="node-details">Contenu du nœud ici...</p>
+    </div>
+    <div class="actions">
+      <div class="ui button" onclick="$('#node-modal').modal('hide')">Fermer</div>
+    </div>
+  </div>
+
+  <!-- External JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  <script>
+    // Données pour le graphe
+    const nodes = new vis.DataSet([
+      { id: 1, label: "Nœud 1", title: "Informations supplémentaires pour le nœud 1" },
+      { id: 2, label: "Nœud 2", title: "Informations supplémentaires pour le nœud 2" },
+      { id: 3, label: "Nœud 3", title: "Informations supplémentaires pour le nœud 3" }
+    ]);
+
+    const edges = new vis.DataSet([
+      { from: 1, to: 2 },
+      { from: 2, to: 3 },
+      { from: 3, to: 1 }
+    ]);
+
+    // Options du graphe
+    const options = {
+      nodes: {
+        shape: "dot",
+        size: 20,
+        font: {
+          size: 15,
+          color: "#000000"
+        },
+        borderWidth: 2
+      },
+      edges: {
+        width: 2,
+        color: "#000000"
+      },
+      interaction: {
+        hover: true
+      }
+    };
+
+    // Initialisation du graphe
+    const container = document.getElementById("network");
+    const data = { nodes, edges };
+    const network = new vis.Network(container, data, options);
+
+    // Gestion du clic sur un nœud
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const node = nodes.get(nodeId);
+        document.getElementById("node-details").innerText = node.title;
+        $("#node-modal").modal("show");
+      }
+    });
+  </script>
+</body>
+</html>
