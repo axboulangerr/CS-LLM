@@ -68,7 +68,10 @@ To install and use the Semantic Cache for LLMs, follow these steps:
 
 ### Script du service web :
 ## lancement
-nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
-
+  ```bash
+  nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
+  ```
 ## arret
-kill $(pgrep -f "uvicorn main:app")
+  ```bash
+  kill $(pgrep -f "uvicorn main:app")
+  ```
