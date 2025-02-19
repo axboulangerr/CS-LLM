@@ -87,14 +87,14 @@
         <div>
             <h3 id="menu-title"></h3>
             <div class="menu" id="menu-links">
-                <a href="index.html">Mon Espace</a>
-                <a href="stats.html">Statistiques Général</a>
-                <a href="stats.html">Classement</a>
+                <a href="http://145.239.177.192:7000/static/index.html">Mon Espace</a>
+                <a href="http://145.239.177.192:7000/static/stats.html">Statistiques Général</a>
+                <a href="http://145.239.177.192:7000/static/stats.html">Classement</a>
             </div>
         </div>
         <div class="bottom-menu" id="bottom-menu">
             <a style="margin-bottom: 5px;" href="https://github.com/axboulangerr/CS-LLM/tree/main">github</a>
-            <a href="static/login.html" id="login-link">Connexion</a>
+            <a href="http://145.239.177.192:7000/static/login.html" id="login-link">Connexion</a>
         </div>
     </div>
 
@@ -182,9 +182,9 @@
                         document.getElementById("menu-title").textContent = data.username;
                         document.getElementById("menu-links").innerHTML = `
                             <div class="menu" id="menu-links">
-                                            <a href="index.html">Mon Espace</a>
-                                            <a href="stats.html">Statistiques Général</a>
-                                            <a href="stats.html">Classement</a>
+                                            <a href="http://145.239.177.192:7000/static/index.html">Mon Espace</a>
+                                            <a href="http://145.239.177.192:7000/static/stats.html">Statistiques Général</a>
+                                            <a href="http://145.239.177.192:7000/static/stats.html">Classement</a>
                             </div>
                         `;
                         document.getElementById("login-link").textContent = 'Déconnexion';
@@ -205,13 +205,13 @@
                 .then(data => {
                     document.getElementById("menu-title").textContent = '';
                     document.getElementById("menu-links").innerHTML = `
-                        <a href="index.html">Accueil</a>
-                        <a href="stats.html">Statistiques</a>
+                        <a href="http://145.239.177.192:7000/static/index.html">Accueil</a>
+                        <a href="http://145.239.177.192:7000/static/stats.html">Statistiques</a>
                     `;
                     document.getElementById("login-link").textContent = 'Connexion';
-                    document.getElementById("login-link").href = 'login.html';
+                    document.getElementById("login-link").href = 'http://145.239.177.192:7000/static/login.html';
                     $('#logout-modal').modal('hide');
-                    window.location.href = "login.html";
+                    window.location.href = "http://145.239.177.192:7000/static/login.html";
                 })
                 .catch(err => console.error('Erreur lors de la déconnexion:', err));
         }

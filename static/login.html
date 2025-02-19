@@ -46,8 +46,8 @@
   </style>
 </head>
 <body>
-  <!-- Flèche pour retourner à l'index.html -->
-  <a href="index.html" class="back-arrow">&larr;</a>
+  <!-- Flèche pour retourner à l'http://145.239.177.192:7000/static/index.html -->
+  <a href="http://145.239.177.192:7000/static/index.html" class="back-arrow">&larr;</a>
 
   <!-- Container principal pour les formulaires -->
   <div class="ui container p-8 bg-white shadow-md rounded-lg form-container">
@@ -130,7 +130,7 @@
       });
 
       if (response.ok) {
-        window.location.href = "index.html"; // Redirection vers index.html
+        window.location.href = "http://145.239.177.192:7000/static/index.html"; // Redirection vers http://145.239.177.192:7000/static/index.html
       } else {
         const data = await response.json();
         showError(data.detail, "login");
@@ -155,7 +155,7 @@
 
       if (response.ok) {
         console.log("Inscription réussie");
-        window.location.href = "index.html"; // Redirection vers index.html
+        window.location.href = "http://145.239.177.192:7000/static/index.html"; // Redirection vers http://145.239.177.192:7000/static/index.html
       } else {
         const data = await response.json();
         console.log(data)
