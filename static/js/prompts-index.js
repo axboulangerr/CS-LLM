@@ -1,7 +1,7 @@
 
 
 function fetchPrompts() {
-    fetch("http://0.0.0.0:7000/getPrompt")
+    fetch("/getPrompt")
         .then(response => response.json())
         .then(data => {
             prompts = data;
