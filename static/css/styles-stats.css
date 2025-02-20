@@ -1,3 +1,8 @@
+html, body {
+  overflow: hidden;
+}
+
+
 #network {
     width: 100%;
     height: 600px;
@@ -156,13 +161,20 @@
     justify-content: space-between;
     gap: 20px;  /* Espacement entre les graphiques */
     flex-wrap: wrap;  /* Réorganisation possible sur plusieurs lignes */
-    padding: 20px;
+    flex-direction: column;
   }
   
   .chart-container canvas {
-    max-width: 400px;  /* Largeur maximale pour les graphiques */
     max-height: 300px; /* Hauteur maximale pour conserver les proportions */
     flex: 1 1 30%;
     min-width: 100px; /* Largeur minimale */
+  }
+  
+  #network {
+    width: 100%;  /* Largeur 100% */
+    height: 90.5vh; /* Hauteur 100% de la fenêtre */
+    border: none;  /* Supprime la bordure */
+    margin: 0; /* Enlève la marge par défaut */
+    padding: 0; /* Enlève le padding par défaut */
   }
   

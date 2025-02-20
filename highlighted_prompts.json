@@ -1,74 +1,6 @@
 [
     {
-        "prompt": "Describe the process of photosynthesis.",
-        "highlights": [
-            {
-                "word": "Where",
-                "color": "yellow"
-            },
-            {
-                "word": "you",
-                "color": "lightgreen"
-            },
-            {
-                "word": "see",
-                "color": "lightgreen"
-            },
-            {
-                "word": "yourself",
-                "color": "lightgreen"
-            },
-            {
-                "word": "5",
-                "color": "lightgreen"
-            },
-            {
-                "word": "years",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:28:32.634Z"
-    },
-    {
-        "prompt": "I'm planning to travel.",
-        "highlights": [
-            {
-                "word": "feeling",
-                "color": "lightgreen"
-            },
-            {
-                "word": "sad",
-                "color": "lightgreen"
-            },
-            {
-                "word": "today",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:18.600Z"
-    },
-    {
         "prompt": "List the ingredients for making pizza.",
-        "highlights": [
-            {
-                "word": "planning",
-                "color": "lightgreen"
-            },
-            {
-                "word": "travel",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:23.233Z"
-    },
-    {
-        "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
                 "word": "List",
@@ -89,10 +21,10 @@
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:29.866Z"
+        "timestamp": "2025-02-20T09:48:55.559Z"
     },
     {
-        "prompt": "I don't understand calculus.",
+        "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
                 "word": "Describe",
@@ -109,30 +41,30 @@
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:34.456Z"
+        "timestamp": "2025-02-20T09:51:26.171Z"
     },
     {
-        "prompt": "The weather is really nice.",
+        "prompt": "I don't understand calculus.",
         "highlights": [
             {
                 "word": "understand",
                 "color": "lightgreen"
             },
             {
-                "word": "don",
+                "word": "calculus",
                 "color": "lightgreen"
             },
             {
-                "word": "calculus",
+                "word": "don",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:41.376Z"
+        "timestamp": "2025-02-20T09:51:31.437Z"
     },
     {
-        "prompt": "Summarize the plot of Romeo and Juliet.",
+        "prompt": "The weather is really nice.",
         "highlights": [
             {
                 "word": "weather",
@@ -149,62 +81,82 @@
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:46.917Z"
+        "timestamp": "2025-02-20T09:51:36.309Z"
     },
     {
-        "prompt": "Why do you think education is important?",
+        "prompt": "The weather is really nice.",
         "highlights": [
             {
-                "word": "Summarize",
-                "color": "yellow"
-            },
-            {
-                "word": "plot",
+                "word": "weather",
                 "color": "lightgreen"
             },
             {
-                "word": "Romeo",
+                "word": "really",
                 "color": "lightgreen"
             },
             {
-                "word": "Juliet",
+                "word": "nice",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:38:53.155Z"
+        "timestamp": "2025-02-20T09:51:40.754Z"
     },
     {
-        "prompt": "Describe the process of photosynthesis.",
+        "prompt": "What are the benefits of exercise?",
         "highlights": [
             {
-                "word": "Why",
+                "word": "What",
                 "color": "yellow"
             },
             {
-                "word": "you",
+                "word": "benefits",
                 "color": "lightgreen"
             },
             {
-                "word": "think",
-                "color": "lightgreen"
-            },
-            {
-                "word": "education",
-                "color": "lightgreen"
-            },
-            {
-                "word": "important",
+                "word": "exercise",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:39:02.120Z"
+        "timestamp": "2025-02-20T09:51:45.904Z"
     },
     {
         "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T09:51:49.680Z"
+    },
+    {
+        "prompt": "The movie was amazing.",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T09:51:53.073Z"
+    },
+    {
+        "prompt": "Describe the process of photosynthesis.",
         "highlights": [
             {
                 "word": "Describe",
@@ -221,78 +173,106 @@
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T14:39:07.637Z"
+        "timestamp": "2025-02-20T09:51:57.505Z"
+    },
+    {
+        "prompt": "I'm feeling sad today.",
+        "highlights": [
+            {
+                "word": "feeling",
+                "color": "lightgreen"
+            },
+            {
+                "word": "sad",
+                "color": "lightgreen"
+            },
+            {
+                "word": "today",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T09:52:02.826Z"
+    },
+    {
+        "prompt": "Explain quantum mechanics.",
+        "highlights": [
+            {
+                "word": "Explain",
+                "color": "yellow"
+            },
+            {
+                "word": "quantum",
+                "color": "lightgreen"
+            },
+            {
+                "word": "mechanics",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T09:52:07.063Z"
+    },
+    {
+        "prompt": "What are the benefits of exercise?",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "benefits",
+                "color": "lightgreen"
+            },
+            {
+                "word": "exercise",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T09:52:12.171Z"
     },
     {
         "prompt": "What is your favorite color?",
         "highlights": [
             {
-                "word": "Where",
+                "word": "What",
                 "color": "yellow"
             },
             {
-                "word": "do",
+                "word": "your",
                 "color": "lightgreen"
             },
             {
-                "word": "you",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "mgueneau",
-        "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T15:08:16.599Z"
-    },
-    {
-        "prompt": "Tell me a joke.",
-        "highlights": [
-            {
-                "word": "travel",
+                "word": "favorite",
                 "color": "lightgreen"
             },
             {
-                "word": "planning",
-                "color": "yellow"
-            },
-            {
-                "word": "planning",
-                "color": "yellow"
-            },
-            {
-                "word": "to",
-                "color": "yellow"
-            },
-            {
-                "word": "planning",
-                "color": "lightgreen"
-            },
-            {
-                "word": "planning",
-                "color": "yellow"
-            },
-            {
-                "word": "travel",
-                "color": "lightgreen"
-            }
-        ],
-        "username": "fdp",
-        "ip": "46.193.64.108",
-        "timestamp": "2025-02-19T13:21:18.009Z"
-    },
-    {
-        "prompt": "List the ingredients for making pizza.",
-        "highlights": [
-            {
-                "word": "Where",
-                "color": "yellow"
-            },
-            {
-                "word": "do",
+                "word": "color",
                 "color": "lightgreen"
             }
         ],
         "username": "mgueneau",
         "ip": "127.0.0.1",
-        "timestamp": "2025-02-19T15:45:22.579Z"
+        "timestamp": "2025-02-20T09:52:18.682Z"
+    },
+    {
+        "prompt": "What is your favorite color?",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "is",
+                "color": "lightgreen"
+            }
+        ],
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-20T10:01:08.125Z"
     }
 ]

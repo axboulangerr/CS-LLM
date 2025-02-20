@@ -17,4 +17,5 @@ window.onload = () => {
 
 document.querySelector('.ui.button.blue').addEventListener('click', () => {
     saveHighlightedPrompt();
+    loadRandomPrompt();
 });

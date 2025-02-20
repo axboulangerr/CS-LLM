@@ -24,52 +24,28 @@
     </div>
   </div>
 
-    <div class="chart" style="display: flex; flex-direction: column;">
-        <div class="chart-container">
-            <canvas id="dailyPromptsChart" width="400" height="200"></canvas>
-            <canvas id="highlightRatioChart" width="400" height="200"></canvas>
-            <canvas id="customChart" width="400" height="200"></canvas>
-        </div>
-        <canvas id="weeklyElementsChart" width="1200" height="200"></canvas>
-        <div class="ui input" style="margin: 20px;">
-            <input type="text" id="search-input" placeholder="Rechercher un nœud..." />
-        </div>
-  
-        <div id="network"></div>
+  <!-- Section de Recherche -->
+  <div class="chart" style="display: flex; flex-direction: column;">
+    <div class="ui input" style="margin: 20px; justify-content: center; align-items: center;">
+      <input type="text" id="search-input" placeholder="Rechercher un cluster demande..." />
+      <i class="chart bar icon large" id="open-popup-icon" style="cursor: pointer; margin-left: 10px;"></i>
     </div>
-
-
-    <!-- Popup Modal avec un autre réseau vis.js -->
-    <div class="ui modal" id="node-modal">
-        <div class="header">Détails du Nœud</div>
-        <div class="content">
-        <p id="node-details">Contenu du nœud ici...</p>
-        <!-- Div pour le réseau dans le modal -->
-        <div id="node-network" style="width: 100%; height: 300px;"></div>
-        </div>
-        <div class="actions">
-        <div class="ui button" onclick="$('#node-modal').modal('hide')">Fermer</div>
-        </div>
-    </div>
-  
-   
-  <!-- Logout Confirmation Modal -->
-  <div class="ui modal" id="logout-modal">
-    <div class="header">Confirmation de déconnexion</div>
-    <div class="content">
-      <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
-    </div>
-    <div class="actions">
-      <div class="ui red button" onclick="logoutUser()">Déconnexion</div>
-      <div class="ui grey button" onclick="$('#logout-modal').modal('hide')">Annuler</div>
-    </div>
+    <div id="network"></div>
   </div>
 
-  <!-- Highlight Menu for Text -->
-  <div id="highlight-menu" class="highlight-menu">
-    <span class="yellow" onclick="highlightWord('yellow')"></span>
-    <span class="green" onclick="highlightWord('lightgreen')"></span>
-    <span class="remove" onclick="removeHighlight()"></span>
+  <!-- Popup Modal pour les Graphiques -->
+  <div class="ui modal" id="charts-modal" style="justify-content: center; align-items: center; width: 90% !important;">
+    <div class="header">Graphiques Statistiques</div>
+    <div class="content">
+      <div class="chart-container">
+        <canvas id="dailyPromptsChart" width="1200" height="200"></canvas>
+        <canvas id="customChart" width="1200" height="200"></canvas>
+        <canvas id="weeklyElementsChart" width="1200" height="200"></canvas>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui button" onclick="$('#charts-modal').modal('hide')">Fermer</div>
+    </div>
   </div>
 
   <!-- External JS Libraries -->
@@ -82,156 +58,17 @@
   <!-- Custom JS Files -->
   <script src="http://0.0.0.0:7000/static/js/connection-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/prompts-index.js"></script>
-  <script src="http://0.0.0.0:7000/static/js/highlighting-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/highlighting-stats.js"></script>
   <script src="/static/js/history-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/charts-stats.js"></script>
   <script src="http://0.0.0.0:7000/static/js/main-stats.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/network-stats.js"></script>
+
+  <!-- Script pour ouvrir la popup -->
   <script>
-
-    const nodes = new vis.DataSet([]);
-    const nodeData = {}; // Dictionnaire associant les yellowNodes à leurs greenNodes
-
-    // Fonction pour vérifier si un nœud avec un mot existe déjà
-    function nodeExists(word) {
-        return nodes.get().some(node => node.label.toLowerCase() === word.toLowerCase());
-    }
-
-    // Fonction pour ajouter des nœuds pour chaque mot coloré en yellow
-    function addYellowNodes() {
-      dataStat.forEach(item => {
-          let yellowNode = null;
-          let greenWords = [];
-
-          item.highlights.forEach(highlight => {
-              if (highlight.color === 'yellow' && !nodeExists(highlight.word)) {
-                  yellowNode = highlight.word;
-                  nodes.add({
-                      id: yellowNode, // Id unique basé sur le mot
-                      label: yellowNode,
-                      title: `Mot: ${yellowNode}`,
-                  });
-                  nodeData[yellowNode] = ""; // Initialisation avec une chaîne vide
-              }
-              if (highlight.color === 'lightgreen' && yellowNode) {
-                  greenWords.push(highlight.word); // Ajout du mot vert à la liste
-              }
-          });
-
-          if (yellowNode && greenWords.length > 0) {
-            nodeData[yellowNode] = greenWords;
-            console.log(nodeData)
-          }
-      });
-    }
-
-
-
-
-    
-
-    // Fonction de filtrage des nœuds
-    document.getElementById("search-input").addEventListener("input", function () {
-    const searchQuery = this.value.toLowerCase(); // Récupérer la valeur de la recherche
-    const filteredNodes = nodes.get().filter(node => node.label.toLowerCase().includes(searchQuery)); // Filtrer les nœuds
-    
-    // Mettre à jour le graphe avec les nœuds filtrés
-    const filteredNodeIds = filteredNodes.map(node => node.id); // Récupérer les IDs des nœuds filtrés
-    const allNodeIds = nodes.get().map(node => node.id); // Récupérer tous les IDs des nœuds
-
-    // Afficher uniquement les nœuds correspondants à la recherche
-    nodes.update(allNodeIds.map(id => ({ id, hidden: !filteredNodeIds.includes(id) })));
+    $('#open-popup-icon').on('click', function() {
+      $('#charts-modal').modal('show');
     });
-
-    const edges = new vis.DataSet([
-    ]);
-
-    // Options du graphe
-    const options = {
-      nodes: {
-        shape: "dot",
-        size: 20,
-        font: {
-          size: 15,
-          color: "#000000"
-        },
-        borderWidth: 2
-      },
-      edges: {
-        width: 2,
-        color: "#000000"
-      },
-      interaction: {
-        hover: true
-      }
-    };
-
-    const container = document.getElementById("network");
-    const data = { nodes, edges };
-    const network = new vis.Network(container, data, options);
-
-    // Fonction pour afficher le réseau spécifique à chaque nœud
-    function showNodeNetwork(nodeId) {
-    const nodeNetworkContainer = document.getElementById("node-network");
-    
-    let relatedNodes = new Set();
-
-    if (nodeData[nodeId]) {
-        if (Array.isArray(nodeData[nodeId])) {  
-            nodeData[nodeId].forEach(word => relatedNodes.add(word)); // Utilisation directe du tableau
-        } else {
-            console.error("Format invalide pour nodeData[nodeId]:", nodeData[nodeId]);
-        }
-    }
-
-    const nodeList = Array.from(relatedNodes).map((word, index) => ({
-        id: index + 1,
-        label: word,
-        title: `Mot: ${word}`
-    }));
-    
-    const nodes = new vis.DataSet(nodeList);
-    const edges = new vis.DataSet([]);
-    
-    const options = {
-        nodes: {
-            shape: "dot",
-            size: 20,
-            font: {
-                size: 15,
-                color: "#000000"
-            },
-            borderWidth: 2
-        },
-        edges: {
-            width: 2,
-            color: "#000000"
-        },
-        interaction: {
-            hover: true
-        }
-    };
-
-    // Initialisation du réseau dans le modal
-    new vis.Network(nodeNetworkContainer, { nodes, edges }, options);
-}
-
-
-    // Fonction pour afficher les détails du nœud et son réseau
-    network.on("click", function (params) {
-        if (params.nodes.length > 0) {
-            const nodeId = params.nodes[0];
-            const node = nodes.get(nodeId);
-            document.getElementById("node-details").innerText = node.title;
-            
-            // Appeler la fonction pour afficher le réseau spécifique
-            showNodeNetwork(nodeId);
-            
-            // Ouvrir le modal
-            $("#node-modal").modal("show");
-        }
-    });
-
-
   </script>
 </body>
 </html>
