@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Aléatoire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="/static/css/styles-index.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+      <h3 id="menu-title"></h3>
+      <div class="menu" id="menu-links">
+        <a href="/static/index.html">Mon Espace</a>
+        <a href="/static/stats.html">Statistiques Général</a>
+        <a href="/static/aide.html">Aide</a>
+      </div>
+    </div>
+    <div class="bottom-menu" id="bottom-menu">
+      <a style="margin-bottom: 5px;" href="https://github.com/axboulangerr/CS-LLM/tree/main">GitHub</a>
+      <a href="/static/login.html" id="login-link">Connexion</a>
+    </div>
+  </div>
+
+  
+
+
+  <!-- Logout Confirmation Modal -->
+  <div class="ui modal" id="logout-modal">
+    <div class="header">Confirmation de déconnexion</div>
+    <div class="content">
+      <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
+    </div>
+    <div class="actions">
+      <div class="ui red button" onclick="logoutUser()">Déconnexion</div>
+      <div class="ui grey button" onclick="$('#logout-modal').modal('hide')">Annuler</div>
+    </div>
+  </div>
+
+  <!-- Highlight Menu for Text -->
+  <div id="highlight-menu" class="highlight-menu">
+    <span class="yellow" onclick="highlightWord('yellow')"></span>
+    <span class="green" onclick="highlightWord('lightgreen')"></span>
+    <span class="remove" onclick="removeHighlight()"></span>
+  </div>
+
+  <!-- External JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom JS Files -->
+  <script src="/static/js/connection-index.js"></script>
+  <script src="/static/js/prompts-index.js"></script>
+  <script src="/static/js/highlighting-index.js"></script>
+  <script src="/static/js/history-index.js"></script>
+  <script src="/static/js/charts-index.js"></script>
+  <script src="/static/js/main-index.js"></script>
+
+</body>
+</html>
