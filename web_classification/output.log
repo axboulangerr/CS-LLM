@@ -1,0 +1,107 @@
+nohup: ignoring input
+INFO:     Started server process [548971]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7000 (Press CTRL+C to quit)
+INFO:     46.193.64.108:59378 - "GET / HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59378 - "GET /static/css/styles-index.css HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59378 - "GET /static/js/connection-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59408 - "GET /static/js/prompts-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59378 - "GET /static/js/highlighting-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59408 - "GET /static/js/history-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59409 - "GET /static/js/charts-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59378 - "GET /static/js/main-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59378 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59408 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59409 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59410 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "POST /save_highlighted_prompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "GET /static/stats.html HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "GET /static/css/styles-stats.css HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59423 - "GET /static/js/highlighting-stats.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "GET /static/js/charts-stats.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59425 - "GET /static/js/network-stats.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59424 - "GET /static/js/main-stats.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59425 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59424 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59421 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59426 - "GET /static/aide.html HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59426 - "GET /static/img/aide.png HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59426 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59439 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59441 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59426 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59446 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59446 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59447 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59448 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59446 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59452 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     46.193.64.108:59452 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59453 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59456 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:59452 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32405 - "GET / HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32405 - "GET /static/js/connection-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32268 - "GET /static/css/styles-index.css HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32405 - "GET /static/js/charts-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32756 - "GET /static/js/prompts-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32696 - "GET /static/js/highlighting-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32671 - "GET /static/js/history-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32755 - "GET /static/js/main-index.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32755 - "GET /check_connection HTTP/1.1" 500 Internal Server Error
+INFO:     104.28.206.85:32696 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32671 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32755 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32696 - "GET /static/login.html HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32756 - "GET /static/css/styles-login.css HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32696 - "GET /static/js/connection-login.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32755 - "GET /static/js/register-login.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32268 - "GET /static/js/main-login.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32405 - "GET /static/js/error-login.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "POST /login HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32544 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32659 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32544 - "GET /static/stats.html HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32544 - "GET /static/js/highlighting-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32659 - "GET /static/css/styles-stats.css HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "GET /static/js/network-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32320 - "GET /static/js/charts-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32502 - "GET /static/js/main-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32502 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32579 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32320 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32453 - "GET /static/aide.html HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32581 - "GET /static/img/aide.png HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32581 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32453 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32581 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32758 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32382 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32266 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32335 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     185.196.11.99:34542 - "GET / HTTP/1.1" 200 OK
+INFO:     185.196.11.99:34550 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     104.28.206.85:32619 - "GET /static/index.html HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32619 - "GET /static/css/styles-index.css HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32435 - "GET /static/js/connection-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32619 - "GET /static/js/prompts-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32703 - "GET /static/js/charts-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32330 - "GET /static/js/history-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32340 - "GET /static/js/highlighting-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32270 - "GET /static/js/main-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32340 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32703 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32270 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32330 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32703 - "GET /static/aide.html HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32703 - "GET /static/img/aide.png HTTP/1.1" 304 Not Modified
+INFO:     104.28.206.85:32703 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32270 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32330 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.206.85:32703 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK

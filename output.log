@@ -1,0 +1,89 @@
+nohup: ignoring input
+INFO:     Started server process [538809]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7000 (Press CTRL+C to quit)
+INFO:     104.28.242.225:56267 - "GET / HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55948 - "GET /static/css/styles-index.css HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56267 - "GET /static/js/connection-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55948 - "GET /static/js/main-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55884 - "GET /static/js/prompts-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56150 - "GET /static/js/history-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56103 - "GET /static/js/highlighting-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55819 - "GET /static/js/charts-index.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55884 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     104.28.242.225:55819 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56103 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56150 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55884 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56150 - "GET /static/stats.html HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56150 - "GET /static/css/styles-stats.css HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55819 - "GET /static/js/charts-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55948 - "GET /static/js/network-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56103 - "GET /static/js/main-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55884 - "GET /static/js/highlighting-stats.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55884 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:56103 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:55948 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42475 - "GET /static/aide.html HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42475 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42180 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42475 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:27785 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42180 - "GET /static/index.html HTTP/1.1" 200 OK
+INFO:     104.28.242.225:27785 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42475 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42180 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42180 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:27785 - "POST /logout HTTP/1.1" 200 OK
+INFO:     104.28.242.225:27785 - "GET /static/login.html HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42180 - "GET /static/css/styles-login.css HTTP/1.1" 200 OK
+INFO:     104.28.242.225:27785 - "GET /static/js/connection-login.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42475 - "GET /static/js/register-login.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:65259 - "GET /static/js/error-login.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:60680 - "GET /static/js/main-login.js HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42114 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:63241 - "GET /check_connection HTTP/1.1" 500 Internal Server Error
+INFO:     104.28.242.225:42004 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:42004 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:59339 - "POST /login HTTP/1.1" 200 OK
+INFO:     104.28.242.225:59339 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:59391 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:59339 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:59339 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:50365 - "GET /static/stats.html HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:50365 - "GET /static/css/styles-stats.css HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21766 - "GET /static/js/connection-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:50365 - "GET /static/js/prompts-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21766 - "GET /static/js/highlighting-stats.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:12428 - "GET /static/js/charts-stats.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:63003 - "GET /static/js/history-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21946 - "GET /static/js/main-stats.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21806 - "GET /static/js/network-stats.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21946 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:21806 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:63003 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:63003 - "GET /static/aide.html HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:63003 - "GET /static/js/highlighting-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21806 - "GET /static/js/main-index.js HTTP/1.1" 304 Not Modified
+INFO:     104.28.242.225:21806 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     104.28.242.225:21946 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     104.28.242.225:63003 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     104.28.242.225:21806 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48752 - "GET / HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48752 - "GET /static/css/styles-index.css HTTP/1.1" 304 Not Modified
+INFO:     46.193.64.108:48752 - "GET /static/js/connection-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48772 - "GET /static/js/prompts-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48752 - "GET /static/js/highlighting-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48772 - "GET /static/js/charts-index.js HTTP/1.1" 304 Not Modified
+INFO:     46.193.64.108:48773 - "GET /static/js/history-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48752 - "GET /static/js/main-index.js HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48772 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48773 - "GET /check_connection HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48752 - "GET /getPrompt HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48774 - "GET /get_highlighted_prompts HTTP/1.1" 200 OK
+INFO:     46.193.64.108:48773 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [538809]
