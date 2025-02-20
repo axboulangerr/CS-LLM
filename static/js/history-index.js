@@ -1,7 +1,6 @@
 
 function addToHistory(prompt) {
     history.unshift({ prompt: prompt, highlights: [...highlightedWords] });  // Ajouter l'état des surlignages à l'historique
-    console.log(history);
     if (history.length > 15) {
         history.pop();  // Limiter l'historique à 15 éléments
     }
@@ -23,7 +22,6 @@ function renderHistory() {
         historyItem.classList.add('history-item');
         
         // Séparer le texte du prompt en mots
-        console.log(item);
         try {
             let highlightedPrompt = splitTextIntoWords(item.prompt);
             // Appliquer les surlignages spécifiques à cet élément d'historique

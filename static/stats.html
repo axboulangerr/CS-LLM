@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prompt Aléatoire</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <link rel="stylesheet" href="http://0.0.0.0:7000/static/css/styles-index.css">
+  <link rel="stylesheet" href="http://0.0.0.0:7000/static/css/styles-stats.css">
 </head>
 <body>
   <!-- Sidebar -->
@@ -15,7 +15,7 @@
       <div class="menu" id="menu-links">
         <a href="http://0.0.0.0:7000/static/index.html">Mon Espace</a>
         <a href="http://0.0.0.0:7000/static/stats.html">Statistiques Général</a>
-        <a href="http://0.0.0.0:7000/static/stats.html">Classement</a>
+        <a href="http://0.0.0.0:7000/static/aide.html">Aide</a>
       </div>
     </div>
     <div class="bottom-menu" id="bottom-menu">
@@ -24,44 +24,65 @@
     </div>
   </div>
 
-    <!-- Chart Section -->
-    <div class="chart-container">
-      <canvas id="dailyPromptsChart" width="400" height="200"></canvas>
-      <canvas id="highlightRatioChart" width="400" height="200"></canvas>
-      <canvas id="customChart" width="400" height="200"></canvas>
+  <!-- Section de Recherche -->
+  <div class="chart" style="display: flex; flex-direction: column;">
+    <div class="ui input" style="margin: 20px; justify-content: center; align-items: center;">
+      <input type="text" id="search-input" placeholder="Rechercher un cluster demande..." />
+      <i class="chart bar icon large" id="open-popup-icon" style="cursor: pointer; margin-left: 10px;"></i>
     </div>
+    <div id="network"></div>
+  </div>
 
-   
-  <!-- Logout Confirmation Modal -->
-  <div class="ui modal" id="logout-modal">
-    <div class="header">Confirmation de déconnexion</div>
+  <!-- Popup Modal pour les Graphiques -->
+  <div class="ui modal" id="charts-modal" style="justify-content: center; align-items: center; width: 90% !important;">
+    <div class="header">Graphiques Statistiques</div>
     <div class="content">
-      <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
+      <div class="chart-container">
+        <canvas id="dailyPromptsChart" width="1200" height="200"></canvas>
+        <canvas id="customChart" width="1200" height="200"></canvas>
+        <canvas id="weeklyElementsChart" width="1200" height="200"></canvas>
+      </div>
     </div>
     <div class="actions">
-      <div class="ui red button" onclick="logoutUser()">Déconnexion</div>
-      <div class="ui grey button" onclick="$('#logout-modal').modal('hide')">Annuler</div>
+      <div class="ui button" onclick="$('#charts-modal').modal('hide')">Fermer</div>
     </div>
   </div>
 
-  <!-- Highlight Menu for Text -->
-  <div id="highlight-menu" class="highlight-menu">
-    <span class="yellow" onclick="highlightWord('yellow')"></span>
-    <span class="green" onclick="highlightWord('lightgreen')"></span>
-    <span class="remove" onclick="removeHighlight()"></span>
+  <!-- Popup Modal avec un autre réseau vis.js -->
+  <div class="ui modal" id="node-modal">
+    <div class="header">Détails du Nœud</div>
+    <div class="content">
+      <p id="node-details">Contenu du nœud ici...</p>
+      <p id="node-occurrences">Nombre d'occurrences : </p>
+      <!-- Div pour le réseau dans le modal -->
+      <div id="node-network" style="width: 100%; height: 300px;"></div>
+    </div>
+    <div class="actions">
+      <div class="ui button" onclick="$('#node-modal').modal('hide')">Fermer</div>
+    </div>
   </div>
 
   <!-- External JS Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom JS Files -->
   <script src="http://0.0.0.0:7000/static/js/connection-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/prompts-index.js"></script>
-  <script src="http://0.0.0.0:7000/static/js/highlighting-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/highlighting-stats.js"></script>
+  <script src="/static/js/history-index.js"></script>
   <script src="http://0.0.0.0:7000/static/js/charts-stats.js"></script>
-  <script src="http://0.0.0.0:7000/static/js/main-index.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/main-stats.js"></script>
+  <script src="http://0.0.0.0:7000/static/js/network-stats.js"></script>
 
+  <!-- Script pour ouvrir la popup -->
+  <script>
+    $('#open-popup-icon').on('click', function() {
+      $('#charts-modal').modal('show');
+    });
+  </script>
 </body>
 </html>

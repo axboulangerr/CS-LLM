@@ -1,11 +1,8 @@
-
-
 function fetchPrompts() {
     fetch("/getPrompt")
         .then(response => response.json())
         .then(data => {
             prompts = data;
-            console.log(prompts)
             loadRandomPrompt();
         })
         .catch(err => console.error('Erreur lors de la récupération des prompts:', err));

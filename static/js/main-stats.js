@@ -12,10 +12,4 @@ window.onload = () => {
     checkConnection();
     fetchPrompts();
     fetchHighlightedPrompts();
-    fetchAndDisplayHistory();
 };
-
-document.querySelector('.ui.button.blue').addEventListener('click', () => {
-    saveHighlightedPrompt();
-    loadRandomPrompt();
-});

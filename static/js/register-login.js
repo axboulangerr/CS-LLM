@@ -14,11 +14,9 @@ document.getElementById("register-btn").addEventListener("click", async () => {
     });
 
     if (response.ok) {
-      console.log("Inscription réussie");
-      window.location.href = "/static/index.html"; // Redirection vers /static/index.html
+      window.location.href = "http://0.0.0.0:7000/static/index.html"; 
     } else {
       const data = await response.json();
-      console.log(data)
       showError(data.detail.split(':',2), "register");
     }
   });
