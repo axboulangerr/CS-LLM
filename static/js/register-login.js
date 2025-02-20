@@ -14,7 +14,7 @@ document.getElementById("register-btn").addEventListener("click", async () => {
     });
 
     if (response.ok) {
-      window.location.href = "http://0.0.0.0:7000/static/index.html"; // Redirection vers http://0.0.0.0:7000/static/index.html
+      window.location.href = "http://0.0.0.0:7000/static/index.html"; 
     } else {
       const data = await response.json();
       showError(data.detail.split(':',2), "register");

@@ -10,7 +10,7 @@ function checkConnection() {
                     <div class="menu" id="menu-links">
                       <a href="/static/index.html">Mon Espace</a>
                       <a href="/static/stats.html">Statistiques Général</a>
-                      <a href="/static/stats.html">Classement</a>
+                      <a href="/static/aide.html">Aide</a>
                     </div>
                 `;
                 document.getElementById("login-link").textContent = 'Déconnexion';
