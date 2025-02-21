@@ -1,5 +1,122 @@
 # Semantic Cache for Large Language Models (LLM) 🌐⚡
 
+# scLLM - Structure du Projet 🚀
+
+## 📖 Description
+scLLM est un projet structuré permettant de séparer clairement les différentes composantes essentielles :
+- **`data/`** 📊 : Gestion des données (brutes, prétraitées, prédictions, etc.).
+- **`docs/`** 📄 : Documentation détaillée.
+- **`logs/`** 📝 : Logs d'exécution.
+- **`models/`** 🤖 : Modèles sauvegardés.
+- **`reports/`** 📈 : Rapports d'analyse et résultats visuels.
+- **`src/`** 🏗️ : Code source organisé par fonctionnalités (gestion des données, modèles, visualisation, etc.).
+- **`tests/`** ✅ : Tests pour garantir la stabilité du code.
+- **`website/`** 🌍 : Interface web pour interagir avec le modèle (classification, visualisation des résultats, etc.).
+
+---
+
+## 📂 Arborescence du projet
+```plaintext
+scLLM
+├── README.md
+├── data
+│   ├── clean_raw        # Données nettoyées mais non transformées
+│   ├── metric           # Résultats des métriques d'évaluation
+│   ├── prediction       # Prédictions générées par les modèles
+│   ├── processed        # Données prétraitées prêtes pour l'entraînement
+│   ├── raw              # Données brutes non traitées
+│   └── temporary        # Fichiers temporaires générés pendant le traitement
+├── docs                 # Documentation du projet
+├── logs                 # Fichiers de logs générés pendant l'exécution
+├── models               # Modèles entraînés et sauvegardés
+├── reports              # Rapports générés (visualisation, analyse, etc.)
+├── requierements        # Dépendances et configurations requises
+├── semantic             # Informations liées à la sémantique et aux embeddings
+├── src                  # Code source principal du projet
+│   ├── data             # Scripts de gestion et de transformation des données
+│   ├── features         # Extraction et ingénierie des caractéristiques
+│   ├── models          # Définition, entraînement et évaluation des modèles
+│   ├── reports         # Génération de rapports et visualisations
+│   ├── tools           # Outils auxiliaires et utilitaires
+│   └── visualisation   # Scripts de visualisation des résultats
+├── tests                # Tests unitaires et d'intégration
+└── website              # Interface web pour l'exploitation du modèle
+    └── web_classification
+        ├── __pycache__  # Fichiers compilés Python
+        ├── connexion.csv             # Historique des connexions
+        ├── highlighted_prompts.json  # Prompts mis en évidence
+        ├── login.csv                 # Informations de connexion
+        ├── main.py                   # Script principal du site web
+        ├── prompts.csv               # Prompts utilisés
+        └── static                    # Fichiers statiques (HTML, CSS, JS, images)
+            ├── aide.html              # Page d'aide
+            ├── css                    # Fichiers CSS pour le style
+            │   ├── styles-index.css
+            │   ├── styles-login.css
+            │   └── styles-stats.css
+            ├── img                    # Images du site
+            │   └── aide.png
+            ├── index.html             # Page d'accueil
+            ├── js                     # Scripts JavaScript pour l'interactivité
+            │   ├── charts-index.js
+            │   ├── charts-stats.js
+            │   ├── connection-index.js
+            │   ├── connection-login.js
+            │   ├── error-login.js
+            │   ├── highlighting-index.js
+            │   ├── highlighting-stats.js
+            │   ├── history-index.js
+            │   ├── main-index.js
+            │   ├── main-login.js
+            │   ├── main-stats.js
+            │   ├── network-stats.js
+            │   ├── prompts-index.js
+            │   └── register-login.js
+            ├── login.html             # Page de connexion
+            └── stats.html             # Page des statistiques
+```
+
+---
+
+## 🔧 Installation
+
+Pour installer et utiliser le projet, suivez ces étapes :
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/your-username/scLLM.git
+   cd scLLM
+   ```
+
+2. Installez les dépendances :
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 🌍 Lancement du service web
+
+### ▶️ Démarrer le serveur
+```bash
+nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
+```
+
+### ⏹️ Arrêter le serveur
+```bash
+kill $(pgrep -f "uvicorn main:app")
+```
+
+---
+
+## 📌 Objectifs
+- **Optimiser la gestion des données et des modèles** 🔄
+- **Améliorer la scalabilité et la réutilisation des résultats** 🚀
+- **Faciliter l'intégration et la visualisation des analyses** 📊
+
+Ce README a été conçu pour structurer et clarifier l'architecture du projet **scLLM**. N'hésitez pas à proposer des améliorations ou des ajouts ! 💡
+
+
 ## Overview 🚀
 
 The increasing size of large language models (LLMs) has resulted in significant computational costs, making their deployment at scale challenging. This project explores the hypothesis that a semantic cache could reduce these costs by efficiently reusing previously generated responses for semantically similar queries. Unlike traditional caching methods that rely on exact matches, our approach uses vector representations and semantic similarity measures to identify when precomputed responses can be reused. This method aims not only to improve computational efficiency but also to maintain the quality of responses. Future experimental evaluations will be necessary to test this hypothesis and assess the impact of the semantic cache on inference time and the overall performance of LLMs.
@@ -50,28 +167,4 @@ If a sufficiently similar prompt exists in the cache, the system can retrieve an
 - **Maintain Response Quality**: Ensure that the reused responses are still relevant and accurate by considering the precision in each prompt.
 - **Reduce Inference Time**: Decrease the amount of time spent generating responses by leveraging a cache of precomputed answers.
 
-## Future Work 🔮
-To validate the effectiveness of the semantic cache approach, the following steps are needed:
-1. **Experimental Evaluation**: Conduct tests comparing the performance of LLMs with and without the semantic cache, focusing on computational efficiency, inference time, and output quality.
-2. **Scalability Tests**: Assess how the cache performs as the size of the model and the number of cached prompts increases.
-3. **Refinement of Caching Strategies**: Explore different methods for handling precision and fine-tuning the similarity threshold for caching.
 
-## Installation 🛠️
-
-To install and use the Semantic Cache for LLMs, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/semantic-cache-llm.git
-   cd semantic-cache-llm
-
-
-### Script du service web :
-## lancement
-  ```bash
-  nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
-  ```
-## arret
-  ```bash
-  kill $(pgrep -f "uvicorn main:app")
-  ```
