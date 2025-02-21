@@ -1,0 +1,61 @@
+[
+    {
+        "prompt": "The movie was amazing.",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I'm glad you enjoyed the movie! A good film can be a wonderful escape.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T09:49:04.092Z"
+    },
+    {
+        "prompt": "List the ingredients for making pizza.",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "To make pizza, you'll need dough, tomato sauce, cheese, and your choice of toppings like pepperoni, mushrooms, and bell peppers.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T09:58:23.638Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "That sounds exciting! Traveling is a great way to experience new cultures and break out of your routine.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T09:58:35.493Z"
+    }
+]

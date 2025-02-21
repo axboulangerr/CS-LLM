@@ -45,33 +45,70 @@ If a sufficiently similar prompt exists in the cache, the system can retrieve an
 3. **Caching Mechanism**: If the similarity between the new prompt and an existing one exceeds a predefined threshold, the cached response is reused. Otherwise, the model generates a new response and stores it.
 4. **Precision Handling**: The system distinguishes between the request and the precision of the prompt to handle subtle variations in context, ensuring that reusing cached responses doesn’t lead to irrelevant or inaccurate answers.
 
-## Objectives 🎯
-- **Improve Computational Efficiency**: By reusing previously generated responses, we can reduce the computational overhead associated with generating responses for similar prompts.
-- **Maintain Response Quality**: Ensure that the reused responses are still relevant and accurate by considering the precision in each prompt.
-- **Reduce Inference Time**: Decrease the amount of time spent generating responses by leveraging a cache of precomputed answers.
+## 📚 Description
+scLLM is a structured project that clearly separates essential components:
+- **`data/`** 📊 : Data management (raw, preprocessed, predictions, etc.).
+- **`docs/`** 📄 : Detailed documentation.
+- **`logs/`** 🗒️ : Execution logs.
+- **`models/`** 🤖 : Saved models.
+- **`reports/`** 📊 : Analysis reports and visual results.
+- **`src/`** 🏭️ : Source code organized by functionality (data management, models, visualization, etc.).
+- **`tests/`** ✅ : Tests to ensure code stability.
+- **`website/`** 🌐 : Web interface for interacting with the model (classification, result visualization, etc.).
 
-## Future Work 🔮
-To validate the effectiveness of the semantic cache approach, the following steps are needed:
-1. **Experimental Evaluation**: Conduct tests comparing the performance of LLMs with and without the semantic cache, focusing on computational efficiency, inference time, and output quality.
-2. **Scalability Tests**: Assess how the cache performs as the size of the model and the number of cached prompts increases.
-3. **Refinement of Caching Strategies**: Explore different methods for handling precision and fine-tuning the similarity threshold for caching.
+## 📂 Project Structure
+```plaintext
+├── README.md
+├── data
+│   ├── clean_raw        # Cleaned data but not yet transformed
+│   ├── metric           # Evaluation metric results
+│   ├── prediction       # Model-generated predictions
+│   ├── processed        # Preprocessed data ready for training
+│   ├── raw              # Raw, unprocessed data
+│   └── temporary        # Temporary files generated during processing
+├── docs                 # Project documentation
+├── logs                 # Log files generated during execution
+├── models               # Trained and saved models
+├── reports              # Generated reports (visualization, analysis, etc.)
+├── requirements         # Required dependencies and configurations
+├── semantic             # Information related to semantics and embeddings
+├── src                  # Main source code of the project
+│   ├── data             # Scripts for data management and transformation
+│   ├── features         # Feature extraction and engineering
+│   ├── models           # Model definition, training, and evaluation
+│   ├── reports          # Report generation and visualizations
+│   ├── tools            # Auxiliary tools and utilities
+│   └── visualization    # Scripts for result visualization
+├── tests                # Unit and integration tests
+└── website              # Web software for project support
+```
 
-## Installation 🛠️
-
-To install and use the Semantic Cache for LLMs, follow these steps:
-
+## 🔧 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/semantic-cache-llm.git
-   cd semantic-cache-llm
+   git clone https://github.com/your-username/scLLM.git
+   cd scLLM
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🌐 Launching the Web Service
+
+### ▶️ Start the server
+```bash
+nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
+```
+
+### ⏹️ Stop the server
+```bash
+kill $(pgrep -f "uvicorn main:app")
+```
+
+## 📌 Objectives
+- **Optimize data and model management** 🔄
+- **Improve scalability and result reuse** 🚀
+- **Facilitate integration and visualization of analyses** 📊
 
 
-### Script du service web :
-## lancement
-  ```bash
-  nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
-  ```
-## arret
-  ```bash
-  kill $(pgrep -f "uvicorn main:app")
-  ```

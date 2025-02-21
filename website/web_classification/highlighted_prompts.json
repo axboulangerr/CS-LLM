@@ -1,0 +1,19 @@
+[
+    {
+        "prompt": "The movie was amazing.",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I'm glad you enjoyed the movie! A good film can be a wonderful escape.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T09:49:04.092Z"
+    }
+]
