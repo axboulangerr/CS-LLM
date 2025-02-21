@@ -50,7 +50,7 @@ class HighlightedPrompt(BaseModel):
 
 CSV_FILE = "connexion.csv"
 LOGIN_CSV_FILE = "login.csv"  # Nouveau fichier pour enregistrer l'IP lors de la connexion
-HIGHLIGHTED_PROMPTS_FILE = "highlighted_prompts.json"  # Nouveau fichier JSON pour enregistrer les prompts surlignés
+HIGHLIGHTED_PROMPTS_FILE = "../../data/raw/highlighted_prompts.json"  # Nouveau fichier JSON pour enregistrer les prompts surlignés
 
 def ensure_csv_headers():
     if not os.path.exists(CSV_FILE) or os.stat(CSV_FILE).st_size == 0:

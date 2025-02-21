@@ -1,0 +1,3 @@
+{"prompt": "The movie was amazing.", "highlight_yellow": [], "highlight_green": ["movie", "amazing"]}
+{"prompt": "List the ingredients for making pizza.", "highlight_yellow": ["List"], "highlight_green": ["ingredients", "making", "pizza"]}
+{"prompt": "I'm planning to travel.", "highlight_yellow": [], "highlight_green": ["planning", "travel"]}
