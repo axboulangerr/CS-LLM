@@ -57,5 +57,537 @@
         "username": "mgueneau",
         "ip": "127.0.0.1",
         "timestamp": "2025-02-21T09:58:35.493Z"
+    },
+    {
+        "prompt": "The movie was amazing.",
+        "highlights": [
+            {
+                "word": "movie",
+                "color": "lightgreen"
+            },
+            {
+                "word": "amazing",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I'm glad you enjoyed the movie! A good film can be a wonderful escape.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:17:59.789Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "Tell",
+                "color": "yellow"
+            },
+            {
+                "word": "me",
+                "color": "lightgreen"
+            },
+            {
+                "word": "joke",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:04.390Z"
+    },
+    {
+        "prompt": "List the ingredients for making pizza.",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "To make pizza, you'll need dough, tomato sauce, cheese, and your choice of toppings like pepperoni, mushrooms, and bell peppers.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:10.544Z"
+    },
+    {
+        "prompt": "I'm planning to travel.",
+        "highlights": [
+            {
+                "word": "planning",
+                "color": "lightgreen"
+            },
+            {
+                "word": "travel",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "That sounds exciting! Traveling is a great way to experience new cultures and break out of your routine.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:14.958Z"
+    },
+    {
+        "prompt": "What are the benefits of exercise?",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "benefits",
+                "color": "lightgreen"
+            },
+            {
+                "word": "exercise",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Exercise helps improve physical health, boosts mental well-being, and enhances cognitive function.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:21.080Z"
+    },
+    {
+        "prompt": "List the ingredients for making pizza.",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "To make pizza, you'll need dough, tomato sauce, cheese, and your choice of toppings like pepperoni, mushrooms, and bell peppers.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:27.030Z"
+    },
+    {
+        "prompt": "Why do you think education is important?",
+        "highlights": [
+            {
+                "word": "Why",
+                "color": "yellow"
+            },
+            {
+                "word": "think",
+                "color": "lightgreen"
+            },
+            {
+                "word": "education",
+                "color": "lightgreen"
+            },
+            {
+                "word": "important",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I believe education is important because it empowers individuals and contributes to societal progress.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:33.908Z"
+    },
+    {
+        "prompt": "Tell me a joke.",
+        "highlights": [
+            {
+                "word": "Tell",
+                "color": "yellow"
+            },
+            {
+                "word": "me",
+                "color": "lightgreen"
+            },
+            {
+                "word": "joke",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:38.114Z"
+    },
+    {
+        "prompt": "Why do you think education is important?",
+        "highlights": [
+            {
+                "word": "Why",
+                "color": "yellow"
+            },
+            {
+                "word": "you",
+                "color": "lightgreen"
+            },
+            {
+                "word": "think",
+                "color": "lightgreen"
+            },
+            {
+                "word": "education",
+                "color": "lightgreen"
+            },
+            {
+                "word": "important",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I believe education is important because it empowers individuals and contributes to societal progress.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:47.355Z"
+    },
+    {
+        "prompt": "Summarize the plot of Romeo and Juliet.",
+        "highlights": [
+            {
+                "word": "Summarize",
+                "color": "yellow"
+            },
+            {
+                "word": "plot",
+                "color": "lightgreen"
+            },
+            {
+                "word": "Romeo",
+                "color": "lightgreen"
+            },
+            {
+                "word": "Juliet",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Romeo and Juliet is a tragedy by William Shakespeare that tells the story of two young star-crossed lovers whose deaths ultimately reconcile their feuding families.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:53.468Z"
+    },
+    {
+        "prompt": "I don't understand calculus.",
+        "highlights": [
+            {
+                "word": "don",
+                "color": "lightgreen"
+            },
+            {
+                "word": "understand",
+                "color": "lightgreen"
+            },
+            {
+                "word": "calculus",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Calculus can be challenging, but with the right resources and dedication, you can certainly grasp it.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:18:59.588Z"
+    },
+    {
+        "prompt": "Describe the process of photosynthesis.",
+        "highlights": [
+            {
+                "word": "Describe",
+                "color": "yellow"
+            },
+            {
+                "word": "process",
+                "color": "lightgreen"
+            },
+            {
+                "word": "photosynthesis",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Photosynthesis is the process by which green plants convert carbon dioxide and water into glucose and oxygen, using sunlight.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:19:03.940Z"
+    },
+    {
+        "prompt": "What are the benefits of exercise?",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "benefits",
+                "color": "lightgreen"
+            },
+            {
+                "word": "exercise",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Exercise helps improve physical health, boosts mental well-being, and enhances cognitive function.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:19:11.678Z"
+    },
+    {
+        "prompt": "List the ingredients for making pizza.",
+        "highlights": [
+            {
+                "word": "List",
+                "color": "yellow"
+            },
+            {
+                "word": "ingredients",
+                "color": "lightgreen"
+            },
+            {
+                "word": "making",
+                "color": "lightgreen"
+            },
+            {
+                "word": "pizza",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "To make pizza, you'll need dough, tomato sauce, cheese, and your choice of toppings like pepperoni, mushrooms, and bell peppers.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T10:19:18.417Z"
+    },
+    {
+        "prompt": "give a tip for marketing from a cost-cutting standpoint.",
+        "highlights": [
+            {
+                "word": "give",
+                "color": "yellow"
+            },
+            {
+                "word": "tip",
+                "color": "lightgreen"
+            },
+            {
+                "word": "marketing",
+                "color": "lightgreen"
+            },
+            {
+                "word": "cost",
+                "color": "lightgreen"
+            },
+            {
+                "word": "cutting",
+                "color": "lightgreen"
+            },
+            {
+                "word": "standpoint",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "One cost-effective marketing strategy is to focus on content marketing. This can include creating and distributing valuable, relevant, and consistent content to attract and engage a clearly defined audience with the goal of driving profitable customer action. Examples of content marketing include blogs, infographics, webinars, and social media posts. This approach can be less expensive than traditional advertising methods and can help to build brand awareness and establish thought leadership in your industry.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T12:52:42.429Z"
+    },
+    {
+        "prompt": "give me a basic example of nuxt in action",
+        "highlights": [
+            {
+                "word": "give",
+                "color": "yellow"
+            },
+            {
+                "word": "basic",
+                "color": "lightgreen"
+            },
+            {
+                "word": "example",
+                "color": "lightgreen"
+            },
+            {
+                "word": "nuxt",
+                "color": "lightgreen"
+            },
+            {
+                "word": "action",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "Sure! Here's a basic example of Nuxt.js in action:\n\nLet's say you want to create a simple blog using Nuxt.js. First, you would create a new Nuxt.js project by running the following command in your terminal:\n```lua\nnpx create-nuxt-app my-blog\n```\nThis will create a new Nuxt.js project called \"my-blog\" with all the necessary files and folders to get started.\n\nNext, you would create a new page for your blog posts. You can do this by creating a new file called `posts.vue` in the `pages` directory of your project. Here's an example of what that file might look like:\n```html\n<template>\n  <div>\n    <h1>My Blog Posts</h1>\n    <ul>\n      <li v-for=\"post in posts\" :key=\"post.id\">\n        <router-link :to=\"`/posts/${post.id}`\">{{ post.title }}</router-link>\n      </li>\n    </ul>\n  </div>\n</template>\n\n<script>\nexport default {\n  asyncData() {\n    return {\n      posts: [\n        { id: 1, title: 'My First Blog Post' },\n        { id: 2, title: 'My Second Blog Post' },\n        { id: 3, title: 'My Third Blog Post' },\n      ]\n    }\n  }\n}\n</script>\n```\nThis page displays a list of blog posts with links to each individual post. The list of posts is stored in the `posts` array in the `asyncData` method, which is a special method in Nuxt.js that allows you to fetch data asynchronously before the page is rendered.\n\nFinally, you would create a new page for each individual blog post. You can do this by creating a new file called `/_id.vue` in the `pages` directory of your project. Here's an example of what that file might look like:\n```html\n<template>\n  <div>\n    <h1>{{ post.title }}</h1>\n    <p>{{ post.body }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  async asyncData({ params }) {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)\n    const post = await response.json()\n\n    return { post }\n  }\n}\n</script>\n```\nThis page displays the title and body of a single blog post, which is fetched from the JSONPlaceholder API using the `asyncData` method and the `params` object, which contains the `id` of the blog post from the URL.\n\nAnd that's it! With these two pages, you now have a basic blog using Nuxt.js. Of course, there are many other features and capabilities of Nuxt.js that you can explore and use to enhance your blog, but this should give you a good starting point.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T12:53:42.520Z"
+    },
+    {
+        "prompt": "top female entertainers by following",
+        "highlights": [
+            {
+                "word": "top",
+                "color": "lightgreen"
+            },
+            {
+                "word": "female",
+                "color": "lightgreen"
+            },
+            {
+                "word": "entertainers",
+                "color": "lightgreen"
+            },
+            {
+                "word": "following",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "I'm assuming you're asking about the top female entertainers based on their popularity or following. Here are some of the most popular female entertainers:\n\n1. Ariana Grande - Singer and actress with over 90 million followers on Instagram.\n2. Selena Gomez - Actress and singer with over 220 million followers on Instagram.\n3. Taylor Swift - Singer-songwriter with over 170 million followers on Instagram.\n4. Beyonc\u00e9 - Singer, actress, and entrepreneur with over 180 million followers on Instagram.\n5. Rihanna - Singer, actress, and entrepreneur with over 100 million followers on Instagram.\n6. Katy Perry - Singer-songwriter with over 100 million followers on Instagram.\n7. Jennifer Lopez - Singer, actress, and entrepreneur with over 180 million followers on Instagram.\n8. Lady Gaga - Singer-songwriter and actress with over 50 million followers on Instagram.\n9. Miley Cyrus - Singer, actress, and songwriter with over 150 million followers on Instagram.\n10. Shakira - Singer-songwriter and dancer with over 70 million followers on Instagram.\n\nNote that the numbers may vary as the popularity of each artist can change over time.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T12:56:55.191Z"
+    },
+    {
+        "prompt": "rc-field-form useform examples",
+        "highlights": [
+            {
+                "word": "rc",
+                "color": "lightgreen"
+            },
+            {
+                "word": "field",
+                "color": "lightgreen"
+            },
+            {
+                "word": "form",
+                "color": "lightgreen"
+            },
+            {
+                "word": "useform",
+                "color": "lightgreen"
+            },
+            {
+                "word": "examples",
+                "color": "yellow"
+            }
+        ],
+        "response": "`rc-field-form` is a React library that provides a simple and efficient way to handle form validation and submission. The library provides a set of components to build complex forms and integrates well with other libraries such as `antd` and `formik`.\n\nHere's an example of how to use `rc-field-form` with `useForm` hook:\n```javascript\nimport React from 'react';\nimport { Form, Input, Button } from 'antd';\nimport { useForm } from 'rc-field-form';\n\nconst DemoForm = () => {\n  const [form] = useForm();\n\n  const handleSubmit = (values) => {\n    console.log(values);\n  };\n\n  return (\n    <Form\n      form={form}\n      onFinish={handleSubmit}\n    >\n      <Form.Item\n        label=\"Username\"\n        name=\"username\"\n        rules={[{ required: true, message: 'Please input your username!' }]}\n      >\n        <Input />\n      </Form.Item>\n\n      <Form.Item\n        label=\"Password\"\n        name=\"password\"\n        rules={[{ required: true, message: 'Please input your password!' }]}\n      >\n        <Input.Password />\n      </Form.Item>\n\n      <Form.Item>\n        <Button type=\"primary\" htmlType=\"submit\">\n          Submit\n        </Button>\n      </Form.Item>\n    </Form>\n  );\n};\n\nexport default DemoForm;\n```\nIn this example, we import the `useForm` hook from `rc-field-form`. We create a form using the `Form` component from `antd` and pass the `form` object returned by `useForm` as a prop. We also define an `onFinish` function to handle form submission.\n\nInside the form, we define two `Form.Item` components for `username` and `password` inputs. We set validation rules using the `rules` prop. Finally, we define a `Button` component to submit the form.\n\nWhen the user submits the form, the `handleSubmit` function is called with the form values as an object. In this example, we simply log the values to the console.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T12:57:40.478Z"
+    },
+    {
+        "prompt": "how can I create an alert in oracle cloud if my daily expenses go over certain treshold?",
+        "highlights": [
+            {
+                "word": "how",
+                "color": "yellow"
+            },
+            {
+                "word": "can",
+                "color": "lightgreen"
+            },
+            {
+                "word": "create",
+                "color": "lightgreen"
+            },
+            {
+                "word": "alert",
+                "color": "lightgreen"
+            },
+            {
+                "word": "oracle",
+                "color": "lightgreen"
+            },
+            {
+                "word": "cloud",
+                "color": "lightgreen"
+            },
+            {
+                "word": "if",
+                "color": "lightgreen"
+            },
+            {
+                "word": "daily",
+                "color": "lightgreen"
+            },
+            {
+                "word": "expenses",
+                "color": "lightgreen"
+            },
+            {
+                "word": "go",
+                "color": "lightgreen"
+            },
+            {
+                "word": "over",
+                "color": "lightgreen"
+            },
+            {
+                "word": "certain",
+                "color": "lightgreen"
+            },
+            {
+                "word": "treshold",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "To create an alert in Oracle Cloud if your daily expenses go over a certain threshold, you can follow these steps:\n\n1. Log in to your Oracle Cloud account and navigate to the \"Cost Analysis\" page.\n2. Click on \"Create Alert\" button.\n3. Select the \"Budget\" alert type and give a name for your alert.\n4. Define the budget amount and the time period that you want to track. For example, you can set a daily budget of $100.\n5. Under \"Alert Conditions,\" select \"Amount spent\" and set the threshold amount to trigger the alert. For example, you can set the threshold to $110 to receive an alert when your daily expenses exceed your budget.\n6. Under \"Notification Preferences,\" select the notification channels and recipients for the alert. You can choose to receive email, SMS, or other notifications.\n7. Click \"Create Alert\" to save the alert.\n\nOnce you have created the alert, Oracle Cloud will monitor your daily expenses and send you an alert when your expenses exceed the specified threshold. This can help you stay on top of your expenses and avoid overspending.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T13:00:00.492Z"
+    },
+    {
+        "prompt": "What are some common English idioms about cats and dogs.",
+        "highlights": [
+            {
+                "word": "What",
+                "color": "yellow"
+            },
+            {
+                "word": "common",
+                "color": "lightgreen"
+            },
+            {
+                "word": "some",
+                "color": "lightgreen"
+            },
+            {
+                "word": "English",
+                "color": "lightgreen"
+            },
+            {
+                "word": "idioms",
+                "color": "lightgreen"
+            },
+            {
+                "word": "cats",
+                "color": "lightgreen"
+            },
+            {
+                "word": "dogs",
+                "color": "lightgreen"
+            },
+            {
+                "word": "about",
+                "color": "lightgreen"
+            }
+        ],
+        "response": "There are many English idioms that involve cats and dogs. Here are some common ones:\n\n1. \"It's raining cats and dogs\" - This idiom means that it is raining very heavily.\n2. \"Let sleeping dogs lie\" - This means to avoid talking about a controversial or sensitive issue that may cause trouble or conflict.\n3. \"A cat has nine lives\" - This means that a cat can survive many dangerous situations or accidents.\n4. \"Fight like cats and dogs\" - This means to argue or fight fiercely and continuously.\n5. \"The cat's out of the bag\" - This means that a secret has been revealed or exposed.\n6. \"Curiosity killed the cat\" - This means that being too nosy or inquisitive can lead to trouble.\n7. \"Barking up the wrong tree\" - This means to pursue a mistaken or misguided course of action.\n8. \"When the cat's away, the mice will play\" - This means that people will often take advantage of an opportunity when the person in charge is absent.\n9. \"To rain cats and dogs\" - This means to fall or come down in great quantities or intensity.\n10. \"Let the cat out of the bag\" - This means to reveal a secret or surprise prematurely.",
+        "username": "mgueneau",
+        "ip": "127.0.0.1",
+        "timestamp": "2025-02-21T13:00:45.864Z"
     }
 ]

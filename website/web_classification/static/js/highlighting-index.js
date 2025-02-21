@@ -44,11 +44,11 @@ function hideHighlightMenu(event) {
 
 function saveHighlightedPrompt() {
     const highlightedPrompt = {
-        prompt: randomPrompt.Prompt,  // Le texte du prompt
+        prompt: randomPrompt.prompt,  // Le texte du prompt
         highlights: highlightedWords,  // Les surlignages
         username: username || 'unknown',  // Le nom d'utilisateur si disponible
         timestamp: new Date().toISOString(),
-        response: randomPrompt.Response
+        response: randomPrompt.response
     };
     console.log("Highlighted Prompt Data:", highlightedPrompt);
     fetch("/save_highlighted_prompt", {
