@@ -18,7 +18,7 @@ function loadRandomPrompt() {
     randomPrompt = prompts[Math.floor(Math.random() * 5010)];
     // Afficher le prompt
     promptContainer.innerHTML = `
-        <p><strong>Prompt:</strong> ${splitTextIntoWords(randomPrompt.Prompt)}</p>
+        <p><strong>Prompt:</strong> ${splitTextIntoWords(randomPrompt.prompt)}</p>
     `;
     // Ajouter un écouteur pour chaque mot pour afficher le menu de surlignage
     const words = promptContainer.querySelectorAll('.word');

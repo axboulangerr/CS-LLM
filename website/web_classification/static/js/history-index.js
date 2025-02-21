@@ -20,7 +20,7 @@ function renderHistory() {
     history.forEach(item => {
         const historyItem = document.createElement('div');
         historyItem.classList.add('history-item');
-        
+        console.log(item)
         // Séparer le texte du prompt en mots
         try {
             let highlightedPrompt = splitTextIntoWords(item.prompt);
@@ -34,7 +34,7 @@ function renderHistory() {
             historyItem.innerHTML = `<p>${highlightedPrompt}</p>`;
             historyList.appendChild(historyItem);
         } catch {
-            let highlightedPrompt = splitTextIntoWords(item.prompt.Prompt);
+            let highlightedPrompt = splitTextIntoWords(item.prompt.prompt);
             // Appliquer les surlignages spécifiques à cet élément d'historique
             item.highlights.forEach(highlight => {
                 const wordToHighlight = new RegExp(`\\b${highlight.word}\\b`, 'g');

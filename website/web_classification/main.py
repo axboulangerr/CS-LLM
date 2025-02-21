@@ -66,7 +66,11 @@ def ensure_csv_headers():
 @app.get("/getPrompt")
 def get_prompt():
     try:
-        df = pd.read_csv("prompts.csv")
+        df = pd.read_csv("../../data/raw/processed_dataset.csv", delimiter="¶")
+        df = df.sample(n=1000, random_state=42)
+        df = df.replace([float('inf'), float('-inf')], None)  # Remplace inf/-inf par None
+        df = df.fillna("")  # Remplace NaN par une chaîne vide
+        print(df)
         return df.to_dict(orient="records")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
