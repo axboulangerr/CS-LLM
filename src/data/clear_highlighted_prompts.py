@@ -16,5 +16,4 @@ def convert_json_to_jsonl(input_file, output_file):
             }
             f.write(json.dumps(new_entry, ensure_ascii=False) + "\n")
 
-# Utilisation
 convert_json_to_jsonl("data/raw/highlighted_prompts.json", "data/clean_raw/dataset_classification.jsonl")
