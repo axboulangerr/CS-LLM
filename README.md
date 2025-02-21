@@ -60,27 +60,27 @@ scLLM is a structured project that clearly separates essential components:
 ```plaintext
 ├── README.md
 ├── data
-│   ├── clean_raw
-│   ├── metric
-│   ├── prediction
-│   ├── processed
-│   ├── raw
-│   └── temporary
-├── docs
-├── logs
-├── models
-├── reports
-├── requirements
-├── semantic
-├── src
-│   ├── data
-│   ├── features
-│   ├── models
-│   ├── reports
-│   ├── tools
-│   └── visualization
-├── tests
-└── website
+│   ├── clean_raw        # Cleaned data but not yet transformed
+│   ├── metric           # Evaluation metric results
+│   ├── prediction       # Model-generated predictions
+│   ├── processed        # Preprocessed data ready for training
+│   ├── raw              # Raw, unprocessed data
+│   └── temporary        # Temporary files generated during processing
+├── docs                 # Project documentation
+├── logs                 # Log files generated during execution
+├── models               # Trained and saved models
+├── reports              # Generated reports (visualization, analysis, etc.)
+├── requirements         # Required dependencies and configurations
+├── semantic             # Information related to semantics and embeddings
+├── src                  # Main source code of the project
+│   ├── data             # Scripts for data management and transformation
+│   ├── features         # Feature extraction and engineering
+│   ├── models           # Model definition, training, and evaluation
+│   ├── reports          # Report generation and visualizations
+│   ├── tools            # Auxiliary tools and utilities
+│   └── visualization    # Scripts for result visualization
+├── tests                # Unit and integration tests
+└── website              # Web software for project support
 ```
 
 ## 🔧 Installation
