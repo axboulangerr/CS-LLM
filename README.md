@@ -58,7 +58,6 @@ scLLM is a structured project that clearly separates essential components:
 
 ## 📂 Project Structure
 ```plaintext
-scLLM
 ├── README.md
 ├── data
 │   ├── clean_raw
