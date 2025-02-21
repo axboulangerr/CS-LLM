@@ -82,21 +82,6 @@ scLLM
 │   └── visualization
 ├── tests
 └── website
-    └── web_classification
-        ├── __pycache__
-        ├── connexion.csv
-        ├── highlighted_prompts.json
-        ├── login.csv
-        ├── main.py
-        ├── prompts.csv
-        ├── static
-            ├── aide.html
-            ├── css
-            ├── img
-            ├── index.html
-            ├── js
-            ├── login.html
-            └── stats.html
 ```
 
 ## 🔧 Installation
