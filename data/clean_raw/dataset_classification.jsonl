@@ -1,3 +1,23 @@
 {"prompt": "The movie was amazing.", "highlight_yellow": [], "highlight_green": ["movie", "amazing"]}
 {"prompt": "List the ingredients for making pizza.", "highlight_yellow": ["List"], "highlight_green": ["ingredients", "making", "pizza"]}
 {"prompt": "I'm planning to travel.", "highlight_yellow": [], "highlight_green": ["planning", "travel"]}
+{"prompt": "The movie was amazing.", "highlight_yellow": [], "highlight_green": ["movie", "amazing"]}
+{"prompt": "Tell me a joke.", "highlight_yellow": ["Tell"], "highlight_green": ["me", "joke"]}
+{"prompt": "List the ingredients for making pizza.", "highlight_yellow": ["List"], "highlight_green": ["ingredients", "making", "pizza"]}
+{"prompt": "I'm planning to travel.", "highlight_yellow": [], "highlight_green": ["planning", "travel"]}
+{"prompt": "What are the benefits of exercise?", "highlight_yellow": ["What"], "highlight_green": ["benefits", "exercise"]}
+{"prompt": "List the ingredients for making pizza.", "highlight_yellow": ["List"], "highlight_green": ["ingredients", "making", "pizza"]}
+{"prompt": "Why do you think education is important?", "highlight_yellow": ["Why"], "highlight_green": ["think", "education", "important"]}
+{"prompt": "Tell me a joke.", "highlight_yellow": ["Tell"], "highlight_green": ["me", "joke"]}
+{"prompt": "Why do you think education is important?", "highlight_yellow": ["Why"], "highlight_green": ["you", "think", "education", "important"]}
+{"prompt": "Summarize the plot of Romeo and Juliet.", "highlight_yellow": ["Summarize"], "highlight_green": ["plot", "Romeo", "Juliet"]}
+{"prompt": "I don't understand calculus.", "highlight_yellow": [], "highlight_green": ["don", "understand", "calculus"]}
+{"prompt": "Describe the process of photosynthesis.", "highlight_yellow": ["Describe"], "highlight_green": ["process", "photosynthesis"]}
+{"prompt": "What are the benefits of exercise?", "highlight_yellow": ["What"], "highlight_green": ["benefits", "exercise"]}
+{"prompt": "List the ingredients for making pizza.", "highlight_yellow": ["List"], "highlight_green": ["ingredients", "making", "pizza"]}
+{"prompt": "give a tip for marketing from a cost-cutting standpoint.", "highlight_yellow": ["give"], "highlight_green": ["tip", "marketing", "cost", "cutting", "standpoint"]}
+{"prompt": "give me a basic example of nuxt in action", "highlight_yellow": ["give"], "highlight_green": ["basic", "example", "nuxt", "action"]}
+{"prompt": "top female entertainers by following", "highlight_yellow": [], "highlight_green": ["top", "female", "entertainers", "following"]}
+{"prompt": "rc-field-form useform examples", "highlight_yellow": ["examples"], "highlight_green": ["rc", "field", "form", "useform"]}
+{"prompt": "how can I create an alert in oracle cloud if my daily expenses go over certain treshold?", "highlight_yellow": ["how"], "highlight_green": ["can", "create", "alert", "oracle", "cloud", "if", "daily", "expenses", "go", "over", "certain", "treshold"]}
+{"prompt": "What are some common English idioms about cats and dogs.", "highlight_yellow": ["What"], "highlight_green": ["common", "some", "English", "idioms", "cats", "dogs", "about"]}
