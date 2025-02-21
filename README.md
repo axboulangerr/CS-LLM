@@ -1,121 +1,6 @@
 # Semantic Cache for Large Language Models (LLM) 🌐⚡
 
-# scLLM - Structure du Projet 🚀
-
-## 📖 Description
-scLLM est un projet structuré permettant de séparer clairement les différentes composantes essentielles :
-- **`data/`** 📊 : Gestion des données (brutes, prétraitées, prédictions, etc.).
-- **`docs/`** 📄 : Documentation détaillée.
-- **`logs/`** 📝 : Logs d'exécution.
-- **`models/`** 🤖 : Modèles sauvegardés.
-- **`reports/`** 📈 : Rapports d'analyse et résultats visuels.
-- **`src/`** 🏗️ : Code source organisé par fonctionnalités (gestion des données, modèles, visualisation, etc.).
-- **`tests/`** ✅ : Tests pour garantir la stabilité du code.
-- **`website/`** 🌍 : Interface web pour interagir avec le modèle (classification, visualisation des résultats, etc.).
-
----
-
-## 📂 Arborescence du projet
-```plaintext
-scLLM
-├── README.md
-├── data
-│   ├── clean_raw        # Données nettoyées mais non transformées
-│   ├── metric           # Résultats des métriques d'évaluation
-│   ├── prediction       # Prédictions générées par les modèles
-│   ├── processed        # Données prétraitées prêtes pour l'entraînement
-│   ├── raw              # Données brutes non traitées
-│   └── temporary        # Fichiers temporaires générés pendant le traitement
-├── docs                 # Documentation du projet
-├── logs                 # Fichiers de logs générés pendant l'exécution
-├── models               # Modèles entraînés et sauvegardés
-├── reports              # Rapports générés (visualisation, analyse, etc.)
-├── requierements        # Dépendances et configurations requises
-├── semantic             # Informations liées à la sémantique et aux embeddings
-├── src                  # Code source principal du projet
-│   ├── data             # Scripts de gestion et de transformation des données
-│   ├── features         # Extraction et ingénierie des caractéristiques
-│   ├── models          # Définition, entraînement et évaluation des modèles
-│   ├── reports         # Génération de rapports et visualisations
-│   ├── tools           # Outils auxiliaires et utilitaires
-│   └── visualisation   # Scripts de visualisation des résultats
-├── tests                # Tests unitaires et d'intégration
-└── website              # Interface web pour l'exploitation du modèle
-    └── web_classification
-        ├── __pycache__  # Fichiers compilés Python
-        ├── connexion.csv             # Historique des connexions
-        ├── highlighted_prompts.json  # Prompts mis en évidence
-        ├── login.csv                 # Informations de connexion
-        ├── main.py                   # Script principal du site web
-        ├── prompts.csv               # Prompts utilisés
-        └── static                    # Fichiers statiques (HTML, CSS, JS, images)
-            ├── aide.html              # Page d'aide
-            ├── css                    # Fichiers CSS pour le style
-            │   ├── styles-index.css
-            │   ├── styles-login.css
-            │   └── styles-stats.css
-            ├── img                    # Images du site
-            │   └── aide.png
-            ├── index.html             # Page d'accueil
-            ├── js                     # Scripts JavaScript pour l'interactivité
-            │   ├── charts-index.js
-            │   ├── charts-stats.js
-            │   ├── connection-index.js
-            │   ├── connection-login.js
-            │   ├── error-login.js
-            │   ├── highlighting-index.js
-            │   ├── highlighting-stats.js
-            │   ├── history-index.js
-            │   ├── main-index.js
-            │   ├── main-login.js
-            │   ├── main-stats.js
-            │   ├── network-stats.js
-            │   ├── prompts-index.js
-            │   └── register-login.js
-            ├── login.html             # Page de connexion
-            └── stats.html             # Page des statistiques
-```
-
----
-
-## 🔧 Installation
-
-Pour installer et utiliser le projet, suivez ces étapes :
-
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/your-username/scLLM.git
-   cd scLLM
-   ```
-
-2. Installez les dépendances :
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
-
-## 🌍 Lancement du service web
-
-### ▶️ Démarrer le serveur
-```bash
-nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
-```
-
-### ⏹️ Arrêter le serveur
-```bash
-kill $(pgrep -f "uvicorn main:app")
-```
-
----
-
-## 📌 Objectifs
-- **Optimiser la gestion des données et des modèles** 🔄
-- **Améliorer la scalabilité et la réutilisation des résultats** 🚀
-- **Faciliter l'intégration et la visualisation des analyses** 📊
-
-Ce README a été conçu pour structurer et clarifier l'architecture du projet **scLLM**. N'hésitez pas à proposer des améliorations ou des ajouts ! 💡
-
+# scLLM - Project Structure 🚀
 
 ## Overview 🚀
 
@@ -162,9 +47,86 @@ If a sufficiently similar prompt exists in the cache, the system can retrieve an
 3. **Caching Mechanism**: If the similarity between the new prompt and an existing one exceeds a predefined threshold, the cached response is reused. Otherwise, the model generates a new response and stores it.
 4. **Precision Handling**: The system distinguishes between the request and the precision of the prompt to handle subtle variations in context, ensuring that reusing cached responses doesn’t lead to irrelevant or inaccurate answers.
 
-## Objectives 🎯
-- **Improve Computational Efficiency**: By reusing previously generated responses, we can reduce the computational overhead associated with generating responses for similar prompts.
-- **Maintain Response Quality**: Ensure that the reused responses are still relevant and accurate by considering the precision in each prompt.
-- **Reduce Inference Time**: Decrease the amount of time spent generating responses by leveraging a cache of precomputed answers.
+## 📚 Description
+scLLM is a structured project that clearly separates essential components:
+- **`data/`** 📊 : Data management (raw, preprocessed, predictions, etc.).
+- **`docs/`** 📄 : Detailed documentation.
+- **`logs/`** 🗒️ : Execution logs.
+- **`models/`** 🤖 : Saved models.
+- **`reports/`** 📊 : Analysis reports and visual results.
+- **`src/`** 🏭️ : Source code organized by functionality (data management, models, visualization, etc.).
+- **`tests/`** ✅ : Tests to ensure code stability.
+- **`website/`** 🌐 : Web interface for interacting with the model (classification, result visualization, etc.).
+
+## 📂 Project Structure
+```plaintext
+scLLM
+├── README.md
+├── data
+│   ├── clean_raw
+│   ├── metric
+│   ├── prediction
+│   ├── processed
+│   ├── raw
+│   └── temporary
+├── docs
+├── logs
+├── models
+├── reports
+├── requirements
+├── semantic
+├── src
+│   ├── data
+│   ├── features
+│   ├── models
+│   ├── reports
+│   ├── tools
+│   └── visualization
+├── tests
+└── website
+    └── web_classification
+        ├── __pycache__
+        ├── connexion.csv
+        ├── highlighted_prompts.json
+        ├── login.csv
+        ├── main.py
+        ├── prompts.csv
+        ├── static
+            ├── aide.html
+            ├── css
+            ├── img
+            ├── index.html
+            ├── js
+            ├── login.html
+            └── stats.html
+```
+
+## 🔧 Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/scLLM.git
+   cd scLLM
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🌐 Launching the Web Service
+
+### ▶️ Start the server
+```bash
+nohup uvicorn main:app --host 0.0.0.0 --port 7000 > output.log 2>&1 &
+```
+
+### ⏹️ Stop the server
+```bash
+kill $(pgrep -f "uvicorn main:app")
+```
+
+## 📌 Objectives
+- **Optimize data and model management** 🔄
+- **Improve scalability and result reuse** 🚀
+- **Facilitate integration and visualization of analyses** 📊
 
 
