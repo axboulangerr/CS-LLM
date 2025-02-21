@@ -40,10 +40,11 @@ class UserLogin(BaseModel):
     username: str
     password: str
 
-# Modèle pour enregistrer le prompt surligné
+# Modèle pour enregistrer le prompt surligné avec la réponse
 class HighlightedPrompt(BaseModel):
     prompt: str
     highlights: list
+    response: str
     username: str
     timestamp: str
 
@@ -52,13 +53,11 @@ LOGIN_CSV_FILE = "login.csv"  # Nouveau fichier pour enregistrer l'IP lors de la
 HIGHLIGHTED_PROMPTS_FILE = "highlighted_prompts.json"  # Nouveau fichier JSON pour enregistrer les prompts surlignés
 
 def ensure_csv_headers():
-    """Vérifie que le fichier CSV contient bien les en-têtes, sinon les ajoute."""
     if not os.path.exists(CSV_FILE) or os.stat(CSV_FILE).st_size == 0:
         with open(CSV_FILE, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(["username", "password"])
 
-    # Vérifier si le fichier login.csv existe et ajouter les en-têtes si nécessaire
     if not os.path.exists(LOGIN_CSV_FILE) or os.stat(LOGIN_CSV_FILE).st_size == 0:
         with open(LOGIN_CSV_FILE, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
@@ -161,9 +160,8 @@ def logout(request: Request):
 @app.post("/save_highlighted_prompt")
 def save_highlighted_prompt(highlighted_prompt: HighlightedPrompt, request: Request):
     try:
-        user_ip = request.client.host  # Récupérer l'IP du client
+        user_ip = request.client.host
 
-        # Vérifier si l'utilisateur est connecté en utilisant son IP
         with open(LOGIN_CSV_FILE, newline="") as login_file:
             reader = csv.DictReader(login_file)
             user_found = False
@@ -175,28 +173,25 @@ def save_highlighted_prompt(highlighted_prompt: HighlightedPrompt, request: Requ
             if not user_found:
                 raise HTTPException(status_code=401, detail="Utilisateur non connecté")
 
-        # Lire les prompts existants du fichier JSON ou créer une liste vide
         if os.path.exists(HIGHLIGHTED_PROMPTS_FILE):
             with open(HIGHLIGHTED_PROMPTS_FILE, "r") as json_file:
                 highlighted_prompts = json.load(json_file)
         else:
             highlighted_prompts = []
 
-        # Ajouter le nouveau prompt surligné
         highlighted_prompts.append({
             "prompt": highlighted_prompt.prompt,
             "highlights": highlighted_prompt.highlights,
+            "response": highlighted_prompt.response,
             "username": highlighted_prompt.username,
             "ip": user_ip,
             "timestamp": highlighted_prompt.timestamp
         })
 
-        # Sauvegarder dans le fichier JSON
         with open(HIGHLIGHTED_PROMPTS_FILE, "w") as json_file:
             json.dump(highlighted_prompts, json_file, indent=4)
 
-        return {"message": "Prompt surligné enregistré avec succès"}
-
+        return {"message": "Prompt surligné et réponse enregistrés avec succès"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

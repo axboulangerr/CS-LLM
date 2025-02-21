@@ -27,7 +27,7 @@ function renderHistory() {
             // Appliquer les surlignages spécifiques à cet élément d'historique
             item.highlights.forEach(highlight => {
                 const wordToHighlight = new RegExp(`\\b${highlight.word}\\b`, 'g');
-                highlightedPrompt = highlightedPrompt.replace(wordToHighlight, `<span style="background-color:${highlight.color}">${highlight.word}</span>`);
+                highlightedPrompt = highlightedPrompt.replace(wordToHighlight, `<span">${highlight.word}</span>`);
             });
 
             // Afficher le prompt avec le surlignage
@@ -38,7 +38,7 @@ function renderHistory() {
             // Appliquer les surlignages spécifiques à cet élément d'historique
             item.highlights.forEach(highlight => {
                 const wordToHighlight = new RegExp(`\\b${highlight.word}\\b`, 'g');
-                highlightedPrompt = highlightedPrompt.replace(wordToHighlight, `<span style="background-color:${highlight.color}">${highlight.word}</span>`);
+                highlightedPrompt = highlightedPrompt.replace(wordToHighlight, `<span>${highlight.word}</span>`);
             });
 
             // Afficher le prompt avec le surlignage

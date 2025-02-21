@@ -47,9 +47,10 @@ function saveHighlightedPrompt() {
         prompt: randomPrompt.Prompt,  // Le texte du prompt
         highlights: highlightedWords,  // Les surlignages
         username: username || 'unknown',  // Le nom d'utilisateur si disponible
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        response: randomPrompt.Response
     };
-
+    console.log("Highlighted Prompt Data:", highlightedPrompt);
     fetch("/save_highlighted_prompt", {
         method: "POST",
         headers: {

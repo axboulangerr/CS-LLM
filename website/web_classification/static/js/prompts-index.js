@@ -16,7 +16,6 @@ function loadRandomPrompt() {
     const promptContainer = document.getElementById("prompt");
 
     randomPrompt = prompts[Math.floor(Math.random() * 5010)];
-
     // Afficher le prompt
     promptContainer.innerHTML = `
         <p><strong>Prompt:</strong> ${splitTextIntoWords(randomPrompt.Prompt)}</p>
