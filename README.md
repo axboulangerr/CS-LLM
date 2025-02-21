@@ -1,7 +1,5 @@
 # Semantic Cache for Large Language Models (LLM) 🌐⚡
 
-# scLLM - Project Structure 🚀
-
 ## Overview 🚀
 
 The increasing size of large language models (LLMs) has resulted in significant computational costs, making their deployment at scale challenging. This project explores the hypothesis that a semantic cache could reduce these costs by efficiently reusing previously generated responses for semantically similar queries. Unlike traditional caching methods that rely on exact matches, our approach uses vector representations and semantic similarity measures to identify when precomputed responses can be reused. This method aims not only to improve computational efficiency but also to maintain the quality of responses. Future experimental evaluations will be necessary to test this hypothesis and assess the impact of the semantic cache on inference time and the overall performance of LLMs.
